@@ -1,1 +1,289 @@
-<p>admin-acceuil works!</p>
+<!-- <p>admin-acceuil works!</p> -->
+
+    
+<input type="checkbox" id="nav-toggle">
+<div class="sidebar">
+    <div class="sidebar-brand">
+      <h1> <span class="fab fa-asymmetrik"> </span> <span style="margin-top: 40px;">FIT-TOGETHER</span>
+      </h1>
+    </div>     
+    <div class="sidebar-menu">
+      <ul>
+        <li>
+          <a [routerLink]="['/adminG']">
+            <span class="fas fa-tachometer-alt">Dashboard</span>
+            <span></span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/categorie']">
+            <span class="fas fa-users">Catégorie</span>
+            <span></span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/sous-categorie']">
+            <span class="fas fa-stream">Sous-Catégorie</span>
+          <span> </span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/Coach']">
+            <span class="fas fa-tasks">Coach</span>
+            <span></span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+</div>    
+
+<div class="main-content">
+  <header>
+    <h2>
+      <label for="nav-toggle">
+        <span class="fas fa-bars"></span>
+      </label>
+      Dashboard
+    </h2>
+
+    <div class="search-wrapper">
+      <span class="fas fa-search"> </span>
+      <input type="search" placeholder="Search..." />
+
+    </div>
+
+    <div class="user-wrapper">
+     <img src="https://bit.ly/3bvT89p" width="40px" height="40px" alt="profile-img">
+     <div class="">
+        <h4>Moussa</h4>
+        <small>Coach</small>
+     </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="cards">
+      <div class="card-single" style="border-right: 8px solid #ff9711;">
+        <div>
+          <h1>50</h1>
+          <span>user</span>
+        </div>
+        <div>
+          <span class="fas fa-users"></span>
+        </div>
+      </div>
+      <div class="card-single" style="border-right: 8px solid #ff9711;">
+        <div>
+          <h1>30</h1>
+          <span>video</span>
+        </div>
+        <div>
+          <span class="fas fa-clipboard-list"></span>
+        </div>
+      </div>
+      <div class="card-single" style="border-right: 8px solid #ff9711;">
+        <div>
+          <h1>10</h1>
+          <span>Coach</span>
+        </div>
+        <div>
+          <span class="fas fa-shopping-cart"></span>
+        </div>
+      </div>
+      <div class="card-single" style="border-right: 8px solid #ff9711;">
+        <div>
+          <h1>20</h1>
+          <span>Post</span>
+        </div>
+        <div>
+          <span class="fas fa-wallet"></span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="recent-grid">
+      <div class="projects">
+        <div class="card">
+          <div class="card-header">
+            <h2>Recent Projects</h2>
+            <button>See all <span class="fas fa-arrow-right"></span> </button>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table width="100%">
+              <thead>
+                <tr>
+                  <td>Project Title</td>
+                  <td>Department</td>
+                  <td>Status</td>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>lorem</td>
+                  <td>Moussa</td>
+                  <td>
+                    <span class="status purple"></span>
+                    Review
+                  </td>
+                </tr>
+                <tr>
+                  <td>lorem</td>
+                  <td>Moussa</td>
+                  <td>
+                    <span class="status orange"></span>
+                    Pending
+                  </td>
+                </tr>
+                <tr>
+                  <td>lorem</td>
+                  <td>Moussa</td>
+                  <td>
+                    <span class="status pink"></span>
+                    In Progress
+                  </td>
+                </tr>
+                <tr>
+                  <td>lorem</td>
+                  <td>Moussa</td>
+                  <td>
+                    <span class="status purple"></span>
+                    Review
+                  </td>
+                </tr>
+                <tr>
+                  <td>lorem</td>
+                  <td>Moussa</td>
+                  <td>
+                    <span class="status pink"></span>
+                    In Progress
+                  </td>
+                </tr>
+              </tbody>
+
+            </table>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="customers">
+        <div class="card">
+          <div class="card-header">
+              <h2>New Customers</h2>
+              <button>See all <span class="fas fa-arrow-right"></span> </button>
+          </div>
+          <div class="card-body">
+            <div class="customer">
+              <div class="info">
+                <img src="https://bit.ly/3bvT89p" height="40px" width="40px" alt="customer">
+                <div>
+                  <h4>Moussa</h4>
+                  <small>Moussa</small>
+                </div>
+              </div>
+              <div class="contact">
+                  <span class="fas fa-user-circle"></span>
+                  <span class="fas fa-comment"></span>
+                  <span class="fas fa-phone-alt"></span>
+                </div>
+            </div>
+            <div class="customer">
+              <div class="info">
+                <img src="https://bit.ly/3bvT89p" height="40px" width="40px" alt="customer">
+                <div>
+                  <h4>Moussa</h4>
+                  <small>Moussa</small>
+                </div>
+              </div>
+              <div class="contact">
+                  <span class="fas fa-user-circle"></span>
+                  <span class="fas fa-comment"></span>
+                  <span class="fas fa-phone-alt"></span>
+                </div>
+            </div>
+            <div class="customer">
+              <div class="info">
+                <img src="https://bit.ly/3bvT89p" height="40px" width="40px" alt="customer">
+                <div>
+                  <h4>Moussa</h4>
+                  <small>Moussa</small>
+                </div>
+              </div>
+              <div class="contact">
+                  <span class="fas fa-user-circle"></span>
+                  <span class="fas fa-comment"></span>
+                  <span class="fas fa-phone-alt"></span>
+                </div>
+            </div>
+            <div class="customer">
+              <div class="info">
+                <img src="https://bit.ly/3bvT89p" height="40px" width="40px" alt="customer">
+                <div>
+                  <h4>Moussa</h4>
+                  <small>Moussa</small>
+                </div>
+              </div>
+              <div class="contact">
+                  <span class="fas fa-user-circle"></span>
+                  <span class="fas fa-comment"></span>
+                  <span class="fas fa-phone-alt"></span>
+                </div>
+            </div>
+            <div class="customer">
+              <div class="info">
+                <img src="https://bit.ly/3bvT89p" height="40px" width="40px" alt="customer">
+                <div>
+                  <h4>Moussa</h4>
+                  <small>Moussa</small>
+                </div>
+              </div>
+              <div class="contact">
+                  <span class="fas fa-user-circle"></span>
+                  <span class="fas fa-comment"></span>
+                  <span class="fas fa-phone-alt"></span>
+                </div>
+            </div>
+            <div class="customer">
+              <div class="info">
+                <img src="https://bit.ly/3bvT89p" height="40px" width="40px" alt="customer">
+                <div>
+                  <h4>Moussa</h4>
+                  <small>Moussa</small>
+                </div>
+              </div>
+              <div class="contact">
+                  <span class="fas fa-user-circle"></span>
+                  <span class="fas fa-comment"></span>
+                  <span class="fas fa-phone-alt"></span>
+                </div>
+            </div>
+            <div class="customer">
+              <div class="info">
+                <img src="https://bit.ly/3bvT89p" height="40px" width="40px" alt="customer">
+                <div>
+                  <h4>Moussa</h4>
+                  <small>Moussa</small>
+                </div>
+              </div>
+              <div class="contact">
+                  <span class="fas fa-user-circle"></span>
+                  <span class="fas fa-comment"></span>
+                  <span class="fas fa-phone-alt"></span>
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>  
+
+  </main>
+</div>
+
+

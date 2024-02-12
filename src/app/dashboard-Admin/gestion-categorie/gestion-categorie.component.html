@@ -1,1 +1,140 @@
-<p>gestion-categorie works!</p>
+<!-- <p>admin-acceuil works!</p> -->
+
+    
+<input type="checkbox" id="nav-toggle">
+<div class="sidebar">
+    <div class="sidebar-brand">
+      <h1> <span class="fab fa-asymmetrik"> </span> <span style="margin-top: 40px;">FIT-TOGETHER</span>
+      </h1>
+    </div>     
+    <div class="sidebar-menu">
+      <ul>
+        <li>
+          <a routerLink="admin">
+            <span class="fas fa-tachometer-alt">Dashboard</span>
+            <span></span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/video']">
+            <span class="fas fa-users">catégorie</span>
+            <span></span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/categorie']">
+            <span class="fas fa-stream">Sous-Catégorie</span>
+          <span> </span>
+          </a>
+        </li>
+        <li>
+          <a >
+            <span class="fas fa-tasks">Coach</span>
+            <span></span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+</div>    
+
+<div class="main-content">
+  <header>
+    <h2>
+      <label for="nav-toggle">
+        <span class="fas fa-bars"></span>
+      </label>
+      Dashboard
+    </h2>
+
+    <div class="search-wrapper">
+      <span class="fas fa-search"> </span>
+      <input type="search" placeholder="Search..." />
+
+    </div>
+
+    <div class="user-wrapper">
+     <img src="https://bit.ly/3bvT89p" width="40px" height="40px" alt="profile-img">
+     <div class="">
+        <h4>Moussa</h4>
+        <small>Coach</small>
+     </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="cards">
+      <div class="card-single" style="border-right: 8px solid #ff9711;">
+        <div>
+          <h1>50</h1>
+          <span>user</span>
+        </div>
+        <div>
+          <span class="fas fa-users"></span>
+        </div>
+      </div>
+      <div class="card-single" style="border-right: 8px solid #ff9711;">
+        <div>
+          <h1>30</h1>
+          <span>video</span>
+        </div>
+        <div>
+          <span class="fas fa-clipboard-list"></span>
+        </div>
+      </div>
+      <div class="card-single" style="border-right: 8px solid #ff9711;">
+        <div>
+          <h1>10</h1>
+          <span>Coach</span>
+        </div>
+        <div>
+          <span class="fas fa-shopping-cart"></span>
+        </div>
+      </div>
+      <div class="card-single" style="border-right: 8px solid #ff9711;">
+        <div>
+          <h1>20</h1>
+          <span>Post</span>
+        </div>
+        <div>
+          <span class="fas fa-wallet"></span>
+        </div>
+      </div>
+
+    </div>
+    <!-- bouton pour l'ajout des catégorie -->
+    <button class="btn" style="margin-top: 50px;">Ajouter</button>
+    <!-- data table pour l'ajout des catégorie -->
+    <table class="table" style="margin-top: 50px;">
+        <thead class="tout">
+          <tr class="titre">
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Body-Sculpt</td>
+            <td><button class="modif">modifier</button>             <button class="mx-3">spprimer</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Yoga</td>
+            <td><button class="modif">modifier</button>             <button class="mx-3">spprimer</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Miles-Pilates</td>
+            <td><button class="modif">modifier</button>             <button class="mx-3">spprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </main>
+</div>
+
+

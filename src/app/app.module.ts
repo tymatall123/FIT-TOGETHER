@@ -35,6 +35,7 @@ import { InscriptionComponent } from './inscription/inscription/inscription.comp
     SousCategorieComponent,
     LoginComponent,
     InscriptionComponent,
+    
   ],
   imports: [
     BrowserModule,

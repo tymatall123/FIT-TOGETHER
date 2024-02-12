@@ -320,7 +320,11 @@ section
 }
 .section_title
 {
-	font-size: 72px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 40px;
+	font-size: 50px;
 	font-weight: 400;
 	color: #262626;
 	line-height: 1.1;
@@ -360,6 +364,9 @@ section
 
 .header
 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -652,6 +659,9 @@ section
 
 .about
 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding-top: 69px;
 	padding-bottom: 192px;
 	background: #FFFFFF;
@@ -717,6 +727,7 @@ section
 }
 .about_text
 {
+	margin-left: -10px;
 	margin-top: 28px;
 }
 .about_button
@@ -732,6 +743,7 @@ section
 }
 .about_image img
 {
+	margin-left: 3%;
 	max-width: 100%;
 }
 
@@ -750,7 +762,11 @@ section
 }
 .team_row
 {
-	margin-top: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* margin-left: 280px; */
+	
 }
 .team_item
 {

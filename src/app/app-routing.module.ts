@@ -18,12 +18,12 @@ import { InscriptionComponent } from './inscription/inscription/inscription.comp
 const routes: Routes = [
   {path:'',redirectTo: 'connexion' , pathMatch:'full',},
   // routes pour utilisateur
+  {path: 'connexion',component:LoginComponent},
   { path: 'Acceuil', component:AcceuilComponent },
   { path: 'contact', component:ContactComponent },
   { path: 'service', component:ServiceComponent },
   { path: 'about-us', component:AboutUsComponent },
   { path: 'post', component:PostComponent},
-  { path: 'login', component:LoginComponent},
   { path: 'inscription', component:InscriptionComponent},
 
 
