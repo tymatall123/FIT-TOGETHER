@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>SportFIT</title>
+<title>FIT-TOGETHER</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="SportFIT template project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="acceuil.component.css">
 </head>
 <body>
 
@@ -20,20 +19,20 @@
 				<div class="col">
 					<div class="header_content d-flex flex-row align-items-center justify-content-start trans_400">
 						<a href="#">
-							<div class="logo d-flex flex-row align-items-center justify-content-start"><img src="assets/dot.png" alt=""><div>Sport<span>fit</span></div></div>
+							<div class="logo d-flex flex-row align-items-center justify-content-start"><img src="assets//dot.png" alt=""><div>FIT<span>TOGETHER</span></div></div>
 						</a>
 						<nav class="main_nav">
 							<ul class="d-flex flex-row align-items-center justify-content-start">
 								<li class="active"><a href="index.html">Acceuil</a></li>
-								<li><a href="about.html">A Propos</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="blog.html">Post</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a [routerLink]="['/about-us']">A Propos</a></li>
+								<li><a [routerLink]="['/service']"> Services</a></li>
+								<li><a [routerLink]="['/post']">Post</a></li>
+								<li><a [routerLink]="['/contact']">Contact</a></li>
 							</ul>
 						</nav>
 						<div class="phone d-flex flex-row align-items-center justify-content-start ml-auto">
 							<i class="fa fa-phone" aria-hidden="true"></i>
-							<div>652-345 3222 11</div>
+							<div>221-78-160-18-07</div>
 						</div>
 					</div>
 				</div>
@@ -63,23 +62,23 @@
 	<div class="menu trans_800">
 		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
 			<ul>
-				<li><a href="index.html">Acceuil</a></li>
-				<li><a href="about.html">A Propos</a></li>
-				<li><a href="services.html">Services</a></li>
-				<li><a href="blog.html">Post</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a [routerLink]="['/Acceuil']">Acceuil</a></li>
+				<li><a [routerLink]="['/about-us']">A Propos</a></li>
+				<li><a [routerLink]="['/service']">Services</a></li>
+				<li><a [routerLink]="['/post']">Post</a></li>
+				<li><a [routerLink]="['/contact']">Contact</a></li>
 			</ul>
 		</div>
 		<div class="menu_phone d-flex flex-row align-items-center justify-content-start">
 			<i class="fa fa-phone" aria-hidden="true"></i>
-				<span>652-345 3222 11</span>
+				<span>+221-78-160-18-07</span>
 		</div>
 	</div>
 
 	<!-- Home -->
 
 	<div class="home">
-		<div class="background_image" style="background-image:url(assets/index.jpg)"></div>
+		<div class="background_image" style="background-image:url(assets//index.jpg)"></div>
 		<div class="overlay"></div>
 		<div class="home_container">
 			<div class="container">
@@ -90,13 +89,13 @@
 								<a class="vimeo video_button d-flex flex-column align-items-center justify-content-center" href="https://player.vimeo.com/video/99340873?autoplay=1&loop=1&title=0&autopause=0">
 									<div class="video_link_content d-flex flex-row align-items-center justify-content-start">
 										<div class="video_icon d-flex flex-column align-items-center justify-content-center"><i class="fa fa-play" aria-hidden="true"></i></div>
-										<span class="video_text">See Workout Video</span>
+										<span class="video_text">vidéo d'entraînement</span>
 									</div>
 								</a>
 							</div>
-							<div class="home_title">Get fit with us</div>
-							<div class="home_subtitle">Pilates, Yoga, Fitness, Spinning & many more</div>
-							<div class="button home_button ml-auto mr-auto"><a href="#">Join Now</a></div>
+							<div class="home_title">Mettons-nous en forme avec nous</div>
+							<div class="home_subtitle">Pilates, Yoga, Fitness bien plus encore</div>
+							<div class="button home_button ml-auto mr-auto"><a href="#">Rejoignez-Nous</a></div>
 						</div>
 					</div>
 				</div>
@@ -114,10 +113,10 @@
 						
 						<!-- Box -->
 						<div class="box">
-							<div class="box_icon d-flex flex-column align-items-center justify-content-center"><img src="assets/icon_1.png" alt=""></div>
-							<div class="box_title">Pilates with trainer</div>
+							<div class="box_icon d-flex flex-column align-items-center justify-content-center"><img src="assets//icon_1.png" alt=""></div>
+							<div class="box_title">Pilates avec un entraîneur</div>
 							<div class="box_text">
-								<p>Etiam commodo justo nec aliquam feugiat. Donec a leo eget augue porttitor sollicitudin.</p>
+								<p>Rejoignez nos sessions de Pilates animées par nos entraîneurs certifiés pour améliorer votre force, votre souplesse et votre posture.</p>
 							</div>
 							<div class="box_link_container">
 								<a href="#"><div class="box_link d-flex flex-column align-items-center justify-content-center trans_200"><div>+</div></div></a>
@@ -126,10 +125,10 @@
 
 						<!-- Box -->
 						<div class="box">
-							<div class="box_icon d-flex flex-column align-items-center justify-content-center"><img src="assets/icon_2.png" alt=""></div>
-							<div class="box_title">Swimming Pool</div>
+							<div class="box_icon d-flex flex-column align-items-center justify-content-center"><img src="assets//icon_1.png" alt=""></div>
+							<div class="box_title">Body-sculp</div>
 							<div class="box_text">
-								<p>Donec a leo eget augue porttitor sollicitudin. Morbi sed varius risus, vitae molestie lectus. Donec id hendrerit.</p>
+								<p>Découvrez notre programme Body Sculpt, conçu pour sculpter et tonifier votre corps de manière efficace et durable.</p>
 							</div>
 							<div class="box_link_container">
 								<a href="#"><div class="box_link d-flex flex-column align-items-center justify-content-center trans_200"><div>+</div></div></a>
@@ -138,10 +137,10 @@
 
 						<!-- Box -->
 						<div class="box">
-							<div class="box_icon d-flex flex-column align-items-center justify-content-center"><img src="assets/icon_3.png" alt=""></div>
-							<div class="box_title">Healthy diet plan</div>
+							<div class="box_icon d-flex flex-column align-items-center justify-content-center"><img src="assets//icon_1.png" alt=""></div>
+							<div class="box_title">Fitness</div>
 							<div class="box_text">
-								<p>Morbi sed varius risus, vitae molestie lectus. Donec id hendrerit velit, eu fringilla neque.</p>
+								<p>Que vous soyez un débutant complet ou un passionné de fitness expérimenté, notre programme offre une variété d'activités pour répondre à tous les niveaux et objectifs.</p>
 							</div>
 							<div class="box_link_container">
 								<a href="#"><div class="box_link d-flex flex-column align-items-center justify-content-center trans_200"><div>+</div></div></a>
@@ -162,14 +161,14 @@
 				<div class="col-lg-6">
 					<div class="about_content">
 						<div class="section_title_container">
-							<div class="section_subtitle">welcome to sportfit</div>
+							<div class="section_subtitle">welcome to FIT-TOGETHER</div>
 							<div class="section_title">About <span>Sportfit</span></div>
 						</div>
 						<div class="text_highlight">Etiam commodo justo nec aliquam feugiat. Donec a leo eget eget augue porttitor sollicitudin augue porttitor sollicitudin.</div>
 						<div class="about_text">
 							<p>Morbi sed varius risus, vitae molestie lectus. Donec id hendrerit velit, eu fringilla neque. Etiam id finibus sapien. Donec sollicitudin luctus ex non pharetra. Aenean lobortis ut leo vel porta. Maecenas ac vestibulum lectus. Cras nulla urna, lacinia ut tempor facilisis, congue dignissim tellus. Maecenas ac vestibulum lectus. Cras nulla urna, lacinia ut tempor facilisis, congue dignissim tellus. Phasellus sit amet justo ullamcorper, elementum ipsum nec.</p>
 						</div>
-						<div class="button about_button"><a href="#">Join Now</a></div>
+						<div class="button about_button"><a href="#">Rejoignez-Nous</a></div>
 					</div>
 				</div>
 			</div>
@@ -178,7 +177,7 @@
 			<div class="container fill_height">
 				<div class="row fill_height">
 					<div class="col-lg-6 offset-lg-6 fill_height">
-						<div class="about_image"><img src="assets/a1.png" alt=""></div>
+						<div class="about_image"><img src="assets//a1.png" alt=""></div>
 					</div>
 				</div>
 			</div>
@@ -188,51 +187,51 @@
 	<!-- Testimonials -->
 
 	<div class="testimonials">
-		<div class="parallax_background parallax-window" data-parallax="scroll"  data-speed="0.8" style="background-image:url(assets/testimonials.jpg)"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="assets//testimonials.jpg" data-speed="0.8"  style="background-image:url(assets/testimonials.jpg)"></div>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 d-flex justify-content-center align-items-center">
+				<div class="col-lg-6">
 					<div class="section_title_container">
 						<div class="section_subtitle">welcome to sportfit</div>
-						<div class="section_title">Testimonials</div>
+						<div class="section_title">Testimoniales</div>
 					</div>
 
 					<!-- Testimonial -->
-					<div class="test test_1 ">
-						<div><div class="test_image"><img src="assets/test_1.jpg" alt=""></div></div>
+					<div class="test test_1 d-flex flex-row align-items-start justify-content-start">
+						<div><div class="test_image"><img src="assets//test_1.jpg" alt=""></div></div>
 						<div class="test_content">
-							<div class="test_name"><a href="#">Diane Smith</a></div>
+							<div class="test_name"><a href="#">saly</a></div>
 							<div class="test_title">client</div>
 							<div class="test_text">
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna.</p>
+								<p>Je suis ravie d'avoir découvert ce programme ! Les séances sont variées et stimulantes, et les instructeurs sont incroyablement motivants. J'ai constaté une amélioration significative de ma forme physique et de mon bien-être général depuis que j'ai commencé.</p>
 							</div>
 							<div class="rating rating_4 test_rating"><i></i><i></i><i></i><i></i><i></i></div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6 d-flex justify-content-center align-items-center">
+				<div class="col-lg-6">
 					
 					<!-- Testimonial -->
-					<div class="test ">
-						<div><div class="test_image"><img src="assets/test_2.jpg" alt=""></div></div>
+					<div class="test d-flex flex-row align-items-start justify-content-start">
+						<div><div class="test_image"><img src="assets//test_2.jpg" alt=""></div></div>
 						<div class="test_content">
-							<div class="test_name"><a href="#">Diane Smith</a></div>
+							<div class="test_name"><a href="#">andré</a></div>
 							<div class="test_title">client</div>
 							<div class="test_text">
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna.</p>
+								<p>Je suis impressionné par la qualité et la diversité des cours proposés. Que ce soit le yoga, le Pilates, chaque entraînement est une véritable expérience. Je recommande vivement ce programme à tous ceux qui recherchent une façon amusante et efficace de se mettre en forme</p>
 							</div>
 							<div class="rating rating_4 test_rating"><i></i><i></i><i></i><i></i><i></i></div>
 						</div>
 					</div>
 
 					<!-- Testimonial -->
-					<div class="test ">
-						<div><div class="test_image"><img src="assets/test_3.jpg" alt=""></div></div>
+					<div class="test d-flex flex-row align-items-start justify-content-start">
+						<div><div class="test_image"><img src="assets//test_3.jpg" alt=""></div></div>
 						<div class="test_content">
-							<div class="test_name"><a href="#">Diane Smith</a></div>
+							<div class="test_name"><a href="#">Mariama</a></div>
 							<div class="test_title">client</div>
 							<div class="test_text">
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna.</p>
+								<p>Ce programme m'a vraiment aidé à retrouver ma motivation pour l'exercice. Les séances sont accessibles à tous les niveaux, ce qui est parfait pour moi qui suis débutante. Je me sens plus forte, plus tonique et plus confiante depuis que j'ai commencé à suivre ce programme.</p>
 							</div>
 							<div class="rating rating_4 test_rating"><i></i><i></i><i></i><i></i><i></i></div>
 						</div>
@@ -242,33 +241,34 @@
 			</div>
 			<div class="row test_button_row">
 				<div class="col text-center">
-					<div class="button test_button"><a href="#">Join Now</a></div>
+					<div class="button test_button"><a href="#">Rejoignez-Nous</a></div>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<!-- Gallery -->
-<div class="gallery">
+
+	<div class="gallery">
 		
 		<!-- Gallery Slider -->
 		<div class="gallery_slider_container">
 			<div class="owl-carousel owl-theme gallery_slider">
 				
 				<!-- Slide -->
-				<div class="owl-item"><img src="images/gallery_3.jpg" alt=""></div>
+				<div class="owl-item"><img src="assets//gallery_3.jpg" alt=""></div>
 
 				<!-- Slide -->
-				<div class="owl-item"><img src="images/gallery_4.jpg" alt=""></div>
+				<div class="owl-item"><img src="assets//gallery_4.jpg" alt=""></div>
 
 				<!-- Slide -->
-				<div class="owl-item"><img src="images/gallery_5.jpg" alt=""></div>
+				<div class="owl-item"><img src="assets//gallery_5.jpg" alt=""></div>
 
 				<!-- Slide -->
-				<div class="owl-item"><img src="images/gallery_1.jpg" alt=""></div>
+				<div class="owl-item"><img src="assets//gallery_1.jpg" alt=""></div>
 
 				<!-- Slide -->
-				<div class="owl-item"><img src="images/gallery_2.jpg" alt=""></div>
+				<div class="owl-item"><img src="assets//gallery_2.jpg" alt=""></div>
 
 			</div>
 		</div>
@@ -281,8 +281,8 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title_container">
-						<div class="section_subtitle">welcome to sportfit</div>
-						<div class="section_title">Our Courses</div>
+						<div class="section_subtitle"></div>
+						<div class="section_title">Nos cours</div>
 					</div>
 				</div>
 			</div>
@@ -292,11 +292,11 @@
 				<div class="col-xl-4 col-md-6 service_col">
 					<div class="service">
 						<div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-							<div><div class="service_icon"><img src="assets/icon_4.png" alt=""></div></div>
-							<div class="service_title">Weight Loss Class</div>
+							<div><div class="service_icon"><img src="assets//icon_4.png" alt=""></div></div>
+							<div class="service_title">Cours de perte de poids</div>
 						</div>
 						<div class="service_text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum.</p>
+							<p>un programme conçu pour vous aider à atteindre vos objectifs de perte de poids de manière efficace et durable.</p>
 						</div>
 					</div>
 				</div>
@@ -305,11 +305,11 @@
 				<div class="col-xl-4 col-md-6 service_col">
 					<div class="service">
 						<div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-							<div><div class="service_icon"><img src="assets/icon_5.png" alt=""></div></div>
-							<div class="service_title">Yoga Classes</div>
+							<div><div class="service_icon"><img src="assets//icon_5.png" alt=""></div></div>
+							<div class="service_title">Cours de yoga</div>
 						</div>
 						<div class="service_text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum.</p>
+							<p>Il s'agit de sessions d'exercices guidés qui se concentrent sur la pratique du yoga, une discipline physique, mentale et spirituelle d'origine indienne</p>
 						</div>
 					</div>
 				</div>
@@ -318,11 +318,11 @@
 				<div class="col-xl-4 col-md-6 service_col">
 					<div class="service">
 						<div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-							<div><div class="service_icon"><img src="assets/icon_6.png" alt=""></div></div>
-							<div class="service_title">Spinning Class</div>
+							<div><div class="service_icon"><img src="assets//icon_6.png" alt=""></div></div>
+							<div class="service_title">Cours de spinning</div>
 						</div>
 						<div class="service_text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum.</p>
+							<p>Nos cours sont conçus pour vous offrir une séance d'entraînement intense et énergisante, où vous pédalerez au rythme de la musique sous la direction d'un instructeur passionné</p>
 						</div>
 					</div>
 				</div>
@@ -331,11 +331,11 @@
 				<div class="col-xl-4 col-md-6 service_col">
 					<div class="service">
 						<div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-							<div><div class="service_icon"><img src="assets/icon_7.png" alt=""></div></div>
-							<div class="service_title">Private Fit Class</div>
+							<div><div class="service_icon"><img src="assets//icon_7.png" alt=""></div></div>
+							<div class="service_title">Cours de fitness</div>
 						</div>
 						<div class="service_text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum.</p>
+							<p> Ces séances d'entraînement individuelles ou en petit groupe sont conçues sur mesure pour répondre à vos besoins spécifiques en matière de remise en forme</p>
 						</div>
 					</div>
 				</div>
@@ -344,11 +344,11 @@
 				<div class="col-xl-4 col-md-6 service_col">
 					<div class="service">
 						<div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-							<div><div class="service_icon"><img src="assets/icon_8.png" alt=""></div></div>
-							<div class="service_title">Nutrition Classes</div>
+							<div><div class="service_icon"><img src="assets//icon_8.png" alt=""></div></div>
+							<div class="service_title">Cours de nutrition</div>
 						</div>
 						<div class="service_text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum.</p>
+							<p> Ces séances interactives vous guideront à travers les principes de la nutrition, vous aidant à comprendre comment choisir des aliments qui favorisent la santé et le bien-être.</p>
 						</div>
 					</div>
 				</div>
@@ -357,11 +357,11 @@
 				<div class="col-xl-4 col-md-6 service_col">
 					<div class="service">
 						<div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-							<div><div class="service_icon"><img src="assets/icon_9.png" alt=""></div></div>
-							<div class="service_title">Pillates Class</div>
+							<div><div class="service_icon"><img src="assets//icon_9.png" alt=""></div></div>
+							<div class="service_title">Cours de Pilates</div>
 						</div>
 						<div class="service_text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum.</p>
+							<p>Lors d'une classe de Pilates, les participants effectuent une série d'exercices au sol ou sur des équipements spécifiques tels que le Reformer, le Cadillac ou le Wunda Chair. </p>
 						</div>
 					</div>
 				</div>
@@ -374,16 +374,16 @@
 
 	<div class="blog">
 		<div class="blog_overlay"></div>
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="assets/blog.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="assets//blog.jpg" data-speed="0.8" style="background-image:url(assets/blog.jpg)"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class=" d-flex flex-row align-items-start justify-content-start">
 						<div class="section_title_container">
-							<div class="section_subtitle">welcome to sportfit</div>
-							<div class="section_title">The Blog</div>
+							<div class="section_subtitle"></div>
+							<div class="section_title">Blog</div>
 						</div>
-						<div class="all_posts_link ml-auto"><a href="#">View all blog posts</a></div>
+						<div class="all_posts_link ml-auto"><a href="#">Voir tous les articles de blog</a></div>
 					</div>
 				</div>
 			</div>
@@ -392,39 +392,40 @@
 				<!-- Blog Post -->
 				<div class="col-lg-4 blog_col">
 					<div class="blog_post">
-						<div class="blog_post_image"><img src="assets/blog_1.jpg" alt=""></div>
-						<div class="blog_post_title"><a href="#">Tips for the perfect body</a></div>
-						<div class="blog_post_date"><a href="#">june 29, 2018</a></div>
+						<div class="blog_post_image"><img src="assets//blog_1.jpg" alt=""></div>
+						<div class="blog_post_title"><a href="#">Conseils pour obtenir le corps parfait</a></div>
+						<div class="blog_post_date"><a href="#"></a></div>
 						<div class="blog_post_text">
-							<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Odio vestibulum est mattis effic iturut.</p>
+							<p>Ces ressources fournissent des conseils, des recommandations et des stratégies pour aider les gens à atteindre leurs objectifs de remise en forme, à améliorer leur santé physique et à adopter un mode de vie plus sain.</p>
 						</div>
-						<div class="blog_post_link"><a href="#">Read More</a></div>
+						<div class="blog_post_link"><a href="#">Voir plus</a></div>
 					</div>
 				</div>
 
 				<!-- Blog Post -->
 				<div class="col-lg-4 blog_col">
 					<div class="blog_post">
-						<div class="blog_post_image"><img src="assets/blog_2.jpg" alt=""></div>
-						<div class="blog_post_title"><a href="#">Tips for the perfect body</a></div>
-						<div class="blog_post_date"><a href="#">june 29, 2018</a></div>
+						<div class="blog_post_image"><img src="assets//blog_2.jpg" alt=""></div>
+						<div class="blog_post_title"><a href="#">
+							Conseils pour le corps parfait</a></div>
+						<div class="blog_post_date"><a href="#"></a></div>
 						<div class="blog_post_text">
-							<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Odio vestibulum est mattis effic iturut.</p>
+							<p>Ces conseils peuvent inclure des suggestions sur l'alimentation, l'exercice, le sommeil, la gestion du stress et d'autres aspects liés à la santé et au bien-être</p>
 						</div>
-						<div class="blog_post_link"><a href="#">Read More</a></div>
+						<div class="blog_post_link"><a href="#">Voir-plus</a></div>
 					</div>
 				</div>
 
 				<!-- Blog Post -->
 				<div class="col-lg-4 blog_col">
 					<div class="blog_post">
-						<div class="blog_post_image"><img src="assets/blog_3.jpg" alt=""></div>
-						<div class="blog_post_title"><a href="#">Video: Pilates 4 Begginers</a></div>
-						<div class="blog_post_date"><a href="#">june 29, 2018</a></div>
+						<div class="blog_post_image"><img src="assets//blog_3.jpg" alt=""></div>
+						<div class="blog_post_title"><a href="#">Pilates pour débutants</a></div>
+						<div class="blog_post_date"><a href="#"></a></div>
 						<div class="blog_post_text">
-							<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Odio vestibulum est mattis effic iturut.</p>
+							<p>Que vous soyez nouveau dans le monde du Pilates ou que vous souhaitiez revoir les bases, cette vidéo vous guidera à travers des exercices simples et efficaces pour renforcer votre corps et améliorer votre bien-être général.</p>
 						</div>
-						<div class="blog_post_link"><a href="#">Read More</a></div>
+						<div class="blog_post_link"><a href="#">Voir-Plus</a></div>
 					</div>
 				</div>
 
@@ -433,6 +434,43 @@
 	</div>
 
 	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="footer_container">
+						<div class="footer_content">
+							<div class="footer_logo">
+								<a href="#">
+									<div class="logo d-flex flex-row align-items-center justify-content-center"><img src="assets//dot.png" alt=""><div>FIT<span>TOGETHER</span></div></div>
+								</a>
+							</div>
+							<nav class="footer_nav">
+								<ul class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center justify-content-center">
+									<li><a [routerLink]="['/Acceuil']">Acceuil</a></li>
+									<li><a [routerLink]="['/about-us']">A Propos</a></li>
+									<li><a [routerLink]="['/service']">Services</a></li>
+									<li><a [routerLink]="['/post']">Post</a></li>
+									<li><a [routerLink]="['/contact']">Contact</a></li>
+								</ul>
+							</nav>
+							<div class="newsletter_container">
+								<form action="#" id="newsletter_form" class="newsletter_form">
+									<input type="text" class="newsletter_input" placeholder="veillez saisir votre mail" required="required">
+									<button class="newsletter_button">go</button>
+								</form>
+							</div>
+							<div class="copyright d-flex flex-row align-items-start justify-content-sm-end justify-content-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="fa fa-heart-o" aria-hidden="true"></i> by fatima <a  target="_blank"></a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+						</div>
+						<div class="footer_image text-center"><img src="assets//footer.png" alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 </div>
 
 <script src="assets/js/jquery-3.2.1.min.js"></script>
