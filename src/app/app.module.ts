@@ -17,6 +17,7 @@ import { GestionCategorieComponent } from './dashboard-Admin/gestion-categorie/g
 import { SousCategorieComponent } from './dashboard-Admin/sous-categorie/sous-categorie.component';
 import { LoginComponent } from './login/login/login.component';
 import { InscriptionComponent } from './inscription/inscription/inscription.component';
+import { DetailVideoComponent } from './interface-user/detail-video/detail-video.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { InscriptionComponent } from './inscription/inscription/inscription.comp
     SousCategorieComponent,
     LoginComponent,
     InscriptionComponent,
+    DetailVideoComponent,
     
   ],
   imports: [

@@ -12,30 +12,35 @@
       <ul>
         <li>
           <a [routerLink]="['/adminG']">
-            <span class="fas fa-tachometer-alt">Dashboard</span>
-            <span></span>
+            <span class="fas fa-tachometer-alt"></span>
+            <span>Dashboard</span>
           </a>
         </li>
         <li>
           <a [routerLink]="['/categorie']">
-            <span class="fas fa-users">catégorie</span>
-            <span></span>
+            <span class="fas fa-users"></span>
+            <span>catégorie</span>
           </a>
         </li>
         <li>
           <a [routerLink]="['/sous-categorie']">
-            <span class="fas fa-stream">Sous-Catégorie</span>
-          <span> </span>
+            <span class="fas fa-stream"></span>
+          <span> Sous-Catégorie</span>
           </a>
         </li>
         <li>
-          <a [routerLink]="['/Coach']">
-            <span class="fas fa-tasks">Coach</span>
-            <span></span>
+          <a class="active" [routerLink]="['/Coach']">
+            <span class="fas fa-tasks"></span>
+            <span>Coach</span>
           </a>
         </li>
       </ul>
-
+      <li style="margin-top: 150px;">
+        <a [routerLink]="['/connexion']">
+          <span class="fa-solid fa-paperclip"></span>
+          <span>Se déconnecter</span>
+        </a>
+      </li>
     </div>
 </div>    
 
@@ -80,7 +85,7 @@
           <span>video</span>
         </div>
         <div>
-          <span class="fas fa-clipboard-list"></span>
+          <span class="fa-solid fa-video"></span>
         </div>
       </div>
       <div class="card-single" style="border-right: 8px solid #ff9711;">
@@ -89,7 +94,7 @@
           <span>Coach</span>
         </div>
         <div>
-          <span class="fas fa-shopping-cart"></span>
+          <span class="fas fa-users"></span>
         </div>
       </div>
       <div class="card-single" style="border-right: 8px solid #ff9711;">

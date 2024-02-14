@@ -16,7 +16,7 @@ import { LoginComponent } from './login/login/login.component';
 import { InscriptionComponent } from './inscription/inscription/inscription.component';
 
 const routes: Routes = [
-  {path:'',redirectTo: 'connexion' , pathMatch:'full',},
+  {path:'',redirectTo: 'Acceuil' , pathMatch:'full',},
   // routes pour utilisateur
   {path: 'connexion',component:LoginComponent},
   { path: 'Acceuil', component:AcceuilComponent },
