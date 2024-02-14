@@ -22,6 +22,10 @@
 ***********/
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700|Allerta+Stencil');
+@import '../../../assets/styles/about.css';
+@import '../../../assets/styles/about_responsive.css';
+@import '../bootstrap-4.1.2/bootstrap.min.css';
+@import '../../../assets/styles/about.css';
 
 /*********************************
 2. Body and some general stuff

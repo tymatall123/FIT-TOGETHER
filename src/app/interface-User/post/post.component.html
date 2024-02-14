@@ -1,172 +1,300 @@
-<!-- <p>post works!</p> -->
-<header class="header">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="header_content d-flex flex-row align-items-center justify-content-start trans_400">
-                    <a href="#">
-                        <div class="logo d-flex flex-row align-items-center justify-content-start"><img src="assets/dot.png" alt=""><div>Sport<span>fit</span></div></div>
-                    </a>
-                    <nav class="main_nav">
-                        <ul class="d-flex flex-row align-items-center justify-content-start">
-                            <li class="active"><a href="index.html">Acceuil</a></li>
-                            <li><a href="about.html">A Propos</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="blog.html">Post</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <div class="phone d-flex flex-row align-items-center justify-content-start ml-auto">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        <div>652-345 3222 11</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blog</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="SportFIT template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="post.component.css">
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start trans_400">
+						<a href="#">
+							<div class="logo d-flex flex-row align-items-center justify-content-start"><img src="assets/dot.png" alt=""><div>FIT<span>-TOGETHER</span></div></div>
+						</a>
+                        <nav class="main_nav">
+							<ul class="d-flex flex-row align-items-center justify-content-start">
+								<li><a [routerLink]="['/Acceuil']">Acceuil</a></li>
+								<li class="active"><a [routerLink]="['/about-us']">A Propos</a></li>
+								<li><a [routerLink]="['/service']">Services</a></li>
+								<li><a [routerLink]="['/post']">Post</a></li>
+								<li><a [routerLink]="['/contact']">Contact</a></li>
+							</ul>
+						</nav>
+						<div class="phone d-flex flex-row align-items-center justify-content-start ml-auto">
+							<i class="fa fa-phone" aria-hidden="true"></i>
+							<div>221-78-160-18-07</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Hamburger -->
+	
+	<div class="hamburger_bar trans_400 d-flex flex-row align-items-center justify-content-start">
+		<div class="hamburger">
+			<div class="menu_toggle d-flex flex-row align-items-center justify-content-start">
+				<span>menu</span>
+				<div class="hamburger_container">
+					<div class="menu_hamburger">
+						<div class="line_1 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+						<div class="line_2 hamburger_lines" style="visibility: inherit; opacity: 1;"></div>
+						<div class="line_3 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Menu -->
+
+	<div class="menu trans_800">
+		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+			<ul>
+				<li><a [routerLink]="['/Acceuil']">Acceuil</a></li>
+				<li><a [routerLink]="['/about-us']">A Propos</a></li>
+				<li><a [routerLink]="['/service']">Services</a></li>
+				<li><a [routerLink]="['/post']">Post</a></li>
+				<li><a [routerLink]="['/contact']">Contact</a></li>
+			</ul>
+		</div>
+		<div class="menu_phone d-flex flex-row align-items-center justify-content-start">
+			<i class="fa fa-phone" aria-hidden="true"></i>
+				<span>221-78-160-18-07</span>
+		</div>
+	</div>
+
+	<!-- Home -->
+
+    <div class="home">
+		<div class="background_image" style="background-image:url(assets/bg_1.jpg)"></div>
+		<div class="overlay"></div>
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content">
+							<div class="home_title">Blog</div>
+							<div class="home_subtitle">Pilates, Yoga, Fitness bien plus encore</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+      <section>
+        <h1>Post</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+          <div class="blog-card blog-card-blog">
+            <div class="blog-card-image">
+                <a href="#"> <img class="img" src="https://img.freepik.com/free-photo/vibrant-collection-healthy-fruit-vegetables-generated-by-ai_24640-80425.jpg?size=626&ext=jpg&ga=GA1.2.999429239.1696939061&semt=sph"> </a>
+                <div class="ripple-cont"></div>
+            </div>
+            <div class="blog-table">
+                <h6 class="blog-category blog-text-success"><i class="far fa-newspaper"></i> </h6>
+                <h4 class="blog-card-caption">
+                    <a href="#">Lorem Ipsum is simply dummy text of the printing and</a>
+                </h4>
+                <p class="blog-card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="ftr">
+                    <div class="author">
+                        <a href="#"> <img src="https://img.freepik.com/free-photo/young-happy-sportswoman-getting-ready-workout-tying-shoelace-fitness-center_637285-470.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" alt="..." class="avatar img-raised"> <span>Lobe</span> </a>
                     </div>
+                    <div class="stats"> <i class="far fa-clock"></i> 10 min </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
-
-<!-- Hamburger -->
-
-<div class="hamburger_bar trans_400 d-flex flex-row align-items-center justify-content-start">
-    <div class="hamburger">
-        <div class="menu_toggle d-flex flex-row align-items-center justify-content-start">
-            <span>menu</span>
-            <div class="hamburger_container">
-                <div class="menu_hamburger">
-                    <div class="line_1 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
-                    <div class="line_2 hamburger_lines" style="visibility: inherit; opacity: 1;"></div>
-                    <div class="line_3 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+        </div>
+            
+            
+            <div class="col-md-4">
+          <div class="blog-card blog-card-blog">
+            <div class="blog-card-image">
+                <a href="#"> <img class="img" src="https://img.freepik.com/premium-photo/fresh-milk-different-glass-bottles_74095-572.jpg?size=626&ext=jpg&ga=GA1.2.999429239.1696939061&semt=ais"> </a>
+                <div class="ripple-cont"></div>
+            </div>
+            <div class="blog-table">
+                <h6 class="blog-category blog-text-success"><i class="fas fa-blog"></i> </h6>
+                <h4 class="blog-card-caption">
+                    <a href="#">Lorem Ipsum is simply dummy text of the printing and</a>
+                </h4>
+                <p class="blog-card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="ftr">
+                    <div class="author">
+                        <a href="#"> <img src="https://img.freepik.com/free-photo/young-happy-sportswoman-getting-ready-workout-tying-shoelace-fitness-center_637285-470.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" alt="..." class="avatar img-raised"> <span>lobe</span> </a>
+                    </div>
+                    <div class="stats"> <i class="far fa-clock"></i> 10 min </div>
                 </div>
             </div>
         </div>
-    </div>
+        </div>
+            
+            <div class="col-md-4">
+          <div class="blog-card blog-card-blog">
+            <div class="blog-card-image">
+                <a href="#"> <img class="img" src="https://img.freepik.com/free-photo/green-apple-with-leaves_1101-453.jpg?size=626&ext=jpg&ga=GA1.2.999429239.1696939061&semt=sph"> </a>
+                <div class="ripple-cont"></div>
+            </div>
+            <div class="blog-table">
+                <h6 class="blog-category blog-text-success"><i class="far fa-newspaper"></i> </h6>
+                <h4 class="blog-card-caption">
+                    <a href="#">Lorem Ipsum is simply dummy text of the printing and</a>
+                </h4>
+                <p class="blog-card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="ftr">
+                    <div class="author">
+                        <a href="#"> <img src="https://img.freepik.com/free-photo/young-happy-sportswoman-getting-ready-workout-tying-shoelace-fitness-center_637285-470.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" alt="..." class="avatar img-raised"> <span>lobe</span> </a>
+                    </div>
+                    <div class="stats"> <i class="far fa-clock"></i> 10 min </div>
+                </div>
+            </div>
+        </div>
+        </div>
+          </div>
+        </div>
+        
+      </section>
+      <section>
+        <h1>Proteines</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+          <div class="blog-card blog-card-blog">
+            <div class="blog-card-image">
+                <a href="#"> <img class="img" src="https://img.freepik.com/free-photo/legumes-broccoli-fruit-salmon-placed-black-cement-floor_1150-19927.jpg?size=626&ext=jpg&ga=GA1.2.999429239.1696939061&semt=sph"> </a>
+                <div class="ripple-cont"></div>
+            </div>
+            <div class="blog-table">
+                <h6 class="blog-category blog-text-success"><i class="far fa-newspaper"></i> </h6>
+                <h4 class="blog-card-caption">
+                    <a href="#">Lorem Ipsum is simply dummy text of the printing and</a>
+                </h4>
+                <p class="blog-card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="ftr">
+                    <div class="author">
+                        <a href="#"> <img src="https://img.freepik.com/free-photo/young-happy-sportswoman-getting-ready-workout-tying-shoelace-fitness-center_637285-470.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" alt="..." class="avatar img-raised"> <span>Lobe</span> </a>
+                    </div>
+                    <div class="stats"> <i class="far fa-clock"></i> 10 min </div>
+                </div>
+            </div>
+        </div>
+        </div>
+            
+            
+            <div class="col-md-4">
+          <div class="blog-card blog-card-blog">
+            <div class="blog-card-image">
+                <a href="#"> <img class="img" src="https://img.freepik.com/free-photo/ketogenic-low-carbs-diet-food-selection-white-wall_155003-27728.jpg?size=626&ext=jpg&ga=GA1.2.999429239.1696939061&semt=sph"> </a>
+                <div class="ripple-cont"></div>
+            </div>
+            <div class="blog-table">
+                <h6 class="blog-category blog-text-success"><i class="fas fa-blog"></i> </h6>
+                <h4 class="blog-card-caption">
+                    <a href="#">Lorem Ipsum is simply dummy text of the printing and</a>
+                </h4>
+                <p class="blog-card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="ftr">
+                    <div class="author">
+                        <a href="#"> <img src="https://img.freepik.com/free-photo/young-happy-sportswoman-getting-ready-workout-tying-shoelace-fitness-center_637285-470.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" alt="..." class="avatar img-raised"> <span>lobe</span> </a>
+                    </div>
+                    <div class="stats"> <i class="far fa-clock"></i> 10 min </div>
+                </div>
+            </div>
+        </div>
+        </div>
+            
+            <div class="col-md-4">
+          <div class="blog-card blog-card-blog">
+            <div class="blog-card-image">
+                <a href="#"> <img class="img" src="https://img.freepik.com/free-photo/healthy-salad-with-salmon-tomatoes-mushrooms-lettuce-lentil-dark_2829-11067.jpg?size=626&ext=jpg&ga=GA1.2.999429239.1696939061&semt=sph"> </a>
+                <div class="ripple-cont"></div>
+            </div>
+            <div class="blog-table">
+                <h6 class="blog-category blog-text-success"><i class="far fa-newspaper"></i> </h6>
+                <h4 class="blog-card-caption">
+                    <a href="#">Lorem Ipsum is simply dummy text of the printing and</a>
+                </h4>
+                <p class="blog-card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="ftr">
+                    <div class="author">
+                        <a href="#"> <img src="https://img.freepik.com/free-photo/young-happy-sportswoman-getting-ready-workout-tying-shoelace-fitness-center_637285-470.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" alt="..." class="avatar img-raised"> <span>lobe</span> </a>
+                    </div>
+                    <div class="stats"> <i class="far fa-clock"></i> 10 min </div>
+                </div>
+            </div>
+        </div>
+        </div>
+          </div>
+        </div>
+        
+      </section>
+		<!-- fin -->
+
+	<!-- Footer -->
+
+    <footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="footer_container">
+						<div class="footer_content">
+							<div class="footer_logo">
+								<a href="#">
+									<div class="logo d-flex flex-row align-items-center justify-content-center"><img src="assets//dot.png" alt=""><div>FIT<span>-TOGETHER</span></div></div>
+								</a>
+							</div>
+							<nav class="footer_nav">
+								<ul class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center justify-content-center">
+									<li><a [routerLink]="['/Acceuil']">Acceuil</a></li>
+									<li><a [routerLink]="['/about-us']">A Propos</a></li>
+									<li><a [routerLink]="['/service']">Services</a></li>
+									<li><a [routerLink]="['/post']">Post</a></li>
+									<li><a [routerLink]="['/contact']">Contact</a></li>
+								</ul>
+							</nav>
+							<div class="newsletter_container">
+								<form action="#" id="newsletter_form" class="newsletter_form">
+									<input type="text" class="newsletter_input" placeholder="veillez saisir votre mail" required="required">
+									<button class="newsletter_button">go</button>
+								</form>
+							</div>
+							<div class="copyright d-flex flex-row align-items-start justify-content-sm-end justify-content-center">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="fa fa-heart-o" aria-hidden="true"></i> by fatima <a  target="_blank"></a>
+</div>
+						</div>
+						<div class="footer_image text-center"><img src="assets//footer.png" alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 </div>
 
-<!-- Menu -->
-
-<div class="menu trans_800">
-    <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
-        <ul>
-            <li><a href="index.html">Acceuil</a></li>
-            <li><a href="about.html">A Propos</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="blog.html">Post</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-    <div class="menu_phone d-flex flex-row align-items-center justify-content-start">
-        <i class="fa fa-phone" aria-hidden="true"></i>
-            <span>221-78-160-18-07</span>
-    </div>
-</div>
-
-<!-- début body -->
-<!-- baniére slider -->
-<div style="width: 100%; height: 295px; left: -1px; top: 90px; position: absolute; background: black"></div>
-<img style="width: 800px; height: 275px; left: -0%; top: 100px; position: absolute; border-radius: 20px" src="https://s3-alpha-sig.figma.com/img/3174/36d5/4f97e993767fbc1e3ad6bf1d0ae13540?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iSv6fQOSUPMzhtV2DbQ5FCslMlyCYO6gd~TFjRCx1dMkig8bX~fk3v9SweeFYSYOtoXhICHibeyWid6oyP5thYTtN-~1iHRfJCIM6b47ZNhXtQZFGL7qWuR10nGO3uRvq1~pQLHzFW8HPoCv8wMF4ZbysSHvaSFGIuOFBYEuYtx6vAdg2SIYQXlr8IKdcbM73bEeBgGLRowrN8A4OvIsj3d~fYzBiii~lp9y5q7uwxdDfU2Gw96b486GPKwaFId5G8yA657JjwKpnym2Y2ZwLLMLCZ6RrocBv3OIc5onEQDgW64qleUQ66rTymLJlojKVylUNePgsbTSz12ykJ8NwQ__" />
-<div style="width: 540px; left: 59%; top: 160px; position: absolute; color: white; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Trouver l'équilibre parfait entre plaisir gustatif et bien-être est la clé pour maintenir une forme optimale. Optez pour une alimentation riche en légumes frais, en protéines maigres et en grains entiers. Privilégiez les collations saines comme les fruits et les noix pour combler les petites faims.</div>
-<!-- intégration des cartes pour les régimes -->
-<!-- barre de recherche -->
-<div style="width: 567px; height: 54px; left: 55%; top: 469px; position: absolute">
-    <div style="width: 567px; height: 54px;  top: 0px; position: absolute; border-radius: 20px; border: 2px #E91F23 solid"></div>
-    <div style="width: 30px; height: 30px; left: 38px; top: 14px; position: absolute">
-        <div style="width: 30px; height: 30px; left: -0px; top: 0px; position: absolute; background: #111111"></div>
-    </div>
-    <div style="left: 99px; top: 19px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 300; line-height: 20px; word-wrap: break-word">recherche</div>
-</div>
-<!-- sections des fruits -->
-<div style="left: 656px; top: 98%; position: absolute; color: black; font-size: 48px; font-family: Poppins; font-weight: 600; line-height: 35px; word-wrap: break-word ;">Les fruits</div>
-
-<div class="row">
-    <div style="width: 400px; height: 528px; left: 70px; top: 115%; position: absolute">
-        <div style="width: 400px; height: 528px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-        <img style="width: 350px; height: 303px; left: 22px; top: 27px; position: absolute; border-radius: 20px" src="https://s3-alpha-sig.figma.com/img/59f3/d9f4/76065fb57e2c88a8e8df738b36ca3ced?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fHbDc2Y6d-sAA2hL6Z4EjDDSaObeeloLb4XuMaub6inQWh-sK-nE6h3XjeIqxTeKKE86Tb4N2jDvLi5s1EFcLcvtLL2uUK1O5TOoxGaHXb1iWLeV9872gsTgTSx3wCndL5rmr2u6byT2rl4RJ0MnIM7ewQjkdcS1heePnvq9Y84Kar8nsQ1yGlpKuHyEBfHXkvhAtp~uMTHZBQsi88pG2F8GK1PwHqMQX-UyGuDG5xz3N0v12MnveCd1W3-OOblUO~kr-xmv~6fOe1tbfRssDI5oVcL0lwut~WkJHqOoKcQ-xrr87CGGUEi7aE7YIoeRrwP4L1-XjrbugsMNv-yKSw__" />
-        <div style="width: 370px; height: 98px; left: 18px; top: 349px; position: absolute; color: #5A5A5A; font-size: 20px; font-family: Open Sans; font-weight: 600; word-wrap: break-word">Les oranges contiennent des composés antioxydants qui aident à lutter contre les radicaux libres, potentiellement bénéfiques pour la prévention de certaines maladies. </div>
-        <div style="width: 350px; height: 0px; left: 14px; top: 447px; position: absolute; border: 1px black solid"></div>
-        <img style="width: 50px; height: 50px; left: 51px; top: 459px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%); border-radius: 9999px" src="https://s3-alpha-sig.figma.com/img/8603/641e/fe5971f61696973bee626250bb8c1702?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bMBx1I6NPeE4drdHD0UB87G5QPCgvQLoHWQTPI3H2VG7lCY-SYygX4A94N3fpoTX-HVxQYcUQmlKwQP8o7yZ8fAYukY-WL2-jz85-IzNqw14yv2kVlKLHdxdExtYcvs1I46Yx9kZw8sRjBFOrNpFORSTx6AjPDWGJyT4weYMlJTgDpfTfKLgoTgfnmeuq2t1rwkRBBFa7AbNTQXPihHYvrOgXcXmiu7RWHX7WAF5kA5nTZjaRNJxC9KIROfdItK5W7VvDw-LaiHzWEaQWZD1Eb8dg3iDCta6IwakdmV1a38raWygOy8-dGaMBfk14WK5OZYZJqPkQwAVEkmSiYLiQQ__" />
-        <div style="left: 118px; top: 476px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 700; line-height: 16px; word-wrap: break-word">soda manager</div>
-    </div>
-    <!-- banane -->
-    <div style="width: 400px; height: 528px; left: 69%; top: 115%; position: absolute">
-        <div style="width: 400px; height: 528px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-        <img style="width: 350px; height: 303px; left: 22px; top: 27px; position: absolute; border-radius: 20px" src="https://s3-alpha-sig.figma.com/img/216a/55fa/7c60f09c988e040cf79fb32175306000?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cWZx23urrR5Wx~YI~HTPXzL5z5IsZQXDkKj1OAwXaRkcqcJr4gSaYzkWIp27j-xogyz83-v6wLjNcAPa7fRfHll18dj7OF7SlYbMzqwIExuEaMxCw4Za3PtS1b-069t4Gh8tXTpHNlKT5oeZm4CWAhKBCDPfUflG6jiAQRug-wJOSoLdImI43DINfv89Gw92Zij3kBReuOVaXoKIERL9uCK4hFnHKpoZzAPnn8IkvQzs97gQp0ZOrXdIhuIeJps~vlUNzkz3qjvPEUjEeDldkqf~-j7KaWnUSTXeJL2uLb~diqCDyoFhjaCNlGku0x-4441tLQt~7woIUNqLqbPU9g__" />
-        <div style="width: 380px; height: 98px; left: 20px; top: 335px; position: absolute; color: #5A5A5A; font-size: 20px; font-family: Open Sans; font-weight: 600; word-wrap: break-word"> Les glucides naturels présents dans les bananes, tels que le fructose, le glucose, fournissent une énergie rapide, ce qui en fait un excellent en-cas avant ou après l'exercice. </div>
-        <div style="width: 350px; height: 0px; left: 14px; top: 455px; position: absolute; border: 1px black solid"></div>
-        <img style="width: 50px; height: 50px; left: 51px; top: 459px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%); border-radius: 9999px" src="https://s3-alpha-sig.figma.com/img/8603/641e/fe5971f61696973bee626250bb8c1702?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bMBx1I6NPeE4drdHD0UB87G5QPCgvQLoHWQTPI3H2VG7lCY-SYygX4A94N3fpoTX-HVxQYcUQmlKwQP8o7yZ8fAYukY-WL2-jz85-IzNqw14yv2kVlKLHdxdExtYcvs1I46Yx9kZw8sRjBFOrNpFORSTx6AjPDWGJyT4weYMlJTgDpfTfKLgoTgfnmeuq2t1rwkRBBFa7AbNTQXPihHYvrOgXcXmiu7RWHX7WAF5kA5nTZjaRNJxC9KIROfdItK5W7VvDw-LaiHzWEaQWZD1Eb8dg3iDCta6IwakdmV1a38raWygOy8-dGaMBfk14WK5OZYZJqPkQwAVEkmSiYLiQQ__" />
-        <div style="left: 118px; top: 476px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 700; line-height: 16px; word-wrap: break-word">lobe manager</div>
-    </div>
-    <!-- Avocat -->
-    <div style="width: 400px; height: 528px; left: 37%; top: 115%; position: absolute">
-        <div style="width: 400px; height: 528px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-        <img style="width: 350px; height: 303px; left: 22px; top: 27px; position: absolute; border-radius: 20px" src="https://s3-alpha-sig.figma.com/img/700f/6cc3/71b9f53ed90062291043d3c37caac50b?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AwGIPEh6-xjhOXX5Y0283Zmu47Fy4FKnKO-JKF6s9MsQodTC2olBMw5zMHYZ-SvknrqC2VtKPXSOG3H-ZwIvLMRu3xMT3v8qc6o3y3sNChF01vEKUktxdGQD5H7CQ9tJ7x1P1SkBxgECbseMlc~3NIZ4kiSQQXSSG1-tbGP3naVSMCrGArBEgOCNjUlsB5BjZiuThh2TCTr0OE59dSe~G9rMPDgJa6wQ3HKhFGH6RTd3wRQS0a-S0b2pVO2orMrgu9u~UPanLE383QMUtqLYWkAHKI67FohcKI~7YltfVq-evGMhfke2R4xtz3n7nApHF5OiUv2vyCB3Zg-gaF6a4Q__" />
-        <div style="width: 350px; height: 98px; left: 25px; top: 349px; position: absolute; color: #5A5A5A; font-size: 20px; font-family: Open Sans; font-weight: 600; word-wrap: break-word">Le potassium présent dans l'avocat peut contribuer à réguler la pression artérielle, ce qui est crucial pour la santé cardiovasculaire. </div>
-        <div style="width: 350px; height: 0px; left: 14px; top: 447px; position: absolute; border: 1px black solid"></div>
-        <img style="width: 50px; height: 50px; left: 51px; top: 459px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%); border-radius: 9999px" src="https://s3-alpha-sig.figma.com/img/8603/641e/fe5971f61696973bee626250bb8c1702?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bMBx1I6NPeE4drdHD0UB87G5QPCgvQLoHWQTPI3H2VG7lCY-SYygX4A94N3fpoTX-HVxQYcUQmlKwQP8o7yZ8fAYukY-WL2-jz85-IzNqw14yv2kVlKLHdxdExtYcvs1I46Yx9kZw8sRjBFOrNpFORSTx6AjPDWGJyT4weYMlJTgDpfTfKLgoTgfnmeuq2t1rwkRBBFa7AbNTQXPihHYvrOgXcXmiu7RWHX7WAF5kA5nTZjaRNJxC9KIROfdItK5W7VvDw-LaiHzWEaQWZD1Eb8dg3iDCta6IwakdmV1a38raWygOy8-dGaMBfk14WK5OZYZJqPkQwAVEkmSiYLiQQ__" />
-        <div style="left: 118px; top: 476px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 700; line-height: 16px; word-wrap: break-word">fatima manager</div>
-    </div>
-</div>
-<!-- section lait -->
-<div style="left: 650px; top: 205%; position: absolute; color: black; font-size: 48px; font-family: Poppins; font-weight: 600; line-height: 35px; word-wrap: break-word">le lait</div>
-<div class="container">
-    <!-- milk premiére carte -->
-    <div style="width: 400px; height: 528px; left: 63px; top: 220%; position: absolute">
-        <div style="width: 400px; height: 528px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-        <img style="width: 350px; height: 303px; left: 22px; top: 27px; position: absolute; border-radius: 20px" src="https://s3-alpha-sig.figma.com/img/8a6c/a1a2/4da0ef406ea42d464145416072229812?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EbHBJAfOaac6def5mKs0ryKRHEW-~Rf71JyJyzzGOEB3qvWRUW1yqCMcKQWQ0LLJHvnouGHkA2jAG1F3g-wqakulsbxOCGeqXlp-BCKi8pd794y3AZdAonByTxr-TCiqjnvYsYyaJcSvPcC1M5cdk1LoMCltTqxDCKswJemGkoajupVXVFqTu-sa7m0MiC8uuF7sI3IUg3maUQtrvrfifxe~0p3nsNp7Dig3mUfNjJ30pxJQoHgFe7avkEL8b00TBUqe249EUQOxjNcymqL8guLcRk-eVqutNAHSLbatVkKbZlp~Wf92UJFcs-4lrhoCGxFBP2GX7A33PS63X4CK~w__" />
-        <div style="width: 350px; height: 98px; left: 37px; top: 349px; position: absolute; color: #5A5A5A; font-size: 20px; font-family: Open Sans; font-weight: 600; word-wrap: break-word">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam </div>
-        <div style="width: 350px; height: 0px; left: 14px; top: 447px; position: absolute; border: 1px black solid"></div>
-        <img style="width: 50px; height: 50px; left: 51px; top: 459px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%); border-radius: 9999px" src="https://s3-alpha-sig.figma.com/img/8603/641e/fe5971f61696973bee626250bb8c1702?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bMBx1I6NPeE4drdHD0UB87G5QPCgvQLoHWQTPI3H2VG7lCY-SYygX4A94N3fpoTX-HVxQYcUQmlKwQP8o7yZ8fAYukY-WL2-jz85-IzNqw14yv2kVlKLHdxdExtYcvs1I46Yx9kZw8sRjBFOrNpFORSTx6AjPDWGJyT4weYMlJTgDpfTfKLgoTgfnmeuq2t1rwkRBBFa7AbNTQXPihHYvrOgXcXmiu7RWHX7WAF5kA5nTZjaRNJxC9KIROfdItK5W7VvDw-LaiHzWEaQWZD1Eb8dg3iDCta6IwakdmV1a38raWygOy8-dGaMBfk14WK5OZYZJqPkQwAVEkmSiYLiQQ__" />
-        <div style="left: 118px; top: 476px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 700; line-height: 16px; word-wrap: break-word">fatima manager</div>
-    </div>
-    <!-- fresh milck deuxiéme carte -->
-    <div style="width: 400px; height: 528px; left: 37.5%; top: 220%; position: absolute">
-        <div style="width: 400px; height: 528px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-        <img style="width: 350px; height: 303px; left: 22px; top: 27px; position: absolute; border-radius: 20px" src="https://s3-alpha-sig.figma.com/img/09fb/631d/f4e4a20bd9e2f9da348584962115cf93?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jswVBgznjtfDSe16uPevPUfDmRfxvwpw8JY3IaxxAtS5PJWUeDShtmbrTjWKPF0Pv5KdKt7MONKL3p636qRU5VO28SEhGYNlP7XMhOl7gpO2LVAEbZYOcQZzssfCituSeAF-3KYwIM9pliFJidB8O8UzP7TpMG3m9PRMAi7ECpqERIXLDEqhsUt2uHrW0HC6PY2F0lcPpW7-8CZYVL3sLp82jwvYED20jjq3vcd6ifsv3EWR3~8GS0JY8eX7zCcQij5S4vfdZhGMrDQIm-a904vQ4mxbilbMa3hNXFdUJXPqSaQaiCzsyZ2PRhgdbP802ddIyEM2quM8P7SshFNzxA__" />
-        <div style="width: 350px; height: 98px; left: 37px; top: 349px; position: absolute; color: #5A5A5A; font-size: 20px; font-family: Open Sans; font-weight: 600; word-wrap: break-word">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam </div>
-        <div style="width: 350px; height: 0px; left: 14px; top: 447px; position: absolute; border: 1px black solid"></div>
-        <img style="width: 50px; height: 50px; left: 51px; top: 459px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%); border-radius: 9999px" src="https://s3-alpha-sig.figma.com/img/8603/641e/fe5971f61696973bee626250bb8c1702?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bMBx1I6NPeE4drdHD0UB87G5QPCgvQLoHWQTPI3H2VG7lCY-SYygX4A94N3fpoTX-HVxQYcUQmlKwQP8o7yZ8fAYukY-WL2-jz85-IzNqw14yv2kVlKLHdxdExtYcvs1I46Yx9kZw8sRjBFOrNpFORSTx6AjPDWGJyT4weYMlJTgDpfTfKLgoTgfnmeuq2t1rwkRBBFa7AbNTQXPihHYvrOgXcXmiu7RWHX7WAF5kA5nTZjaRNJxC9KIROfdItK5W7VvDw-LaiHzWEaQWZD1Eb8dg3iDCta6IwakdmV1a38raWygOy8-dGaMBfk14WK5OZYZJqPkQwAVEkmSiYLiQQ__" />
-        <div style="left: 118px; top: 476px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 700; line-height: 16px; word-wrap: break-word">fatima manager</div>
-    </div>
-    <!-- la lait bridel 3em carte -->
-    <div style="width: 400px; height: 528px; left: 69.5%; top: 220%; position: absolute">
-        <div style="width: 400px; height: 528px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-        <img style="width: 350px; height: 303px; left: 22px; top: 27px; position: absolute; border-radius: 20px" src="https://s3-alpha-sig.figma.com/img/7c11/ca6b/48d741acb1cb72af071f8628a91cd677?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Nuo2eVVpkBvo7k4nV7RsQMcgdXMXpa6JuG1BLQzoOiP7fh~wZ33N03HoIoOFeks0qDAGbj7fPDhvP5J~ZQ4CJQOPMIduIAMeHIakgzggmTkzdWHtN6Pm-ynnsoKVBdPSnWH4WtNGRFo~qWgr8FwYnIe4zQbQw6BBJpJkwCX~KxdPj6xZMgQcNgMwOMNJVpcURmNY40pHPOWqN28wiB2tSq6nCIyk1xwUsb~A8zXPl9jiqAJE0JdxClxIE8NjMV7f9Auawn4juklAsMWZ-Mq-c-KW1xOPCsvG6pD5vcSMeS3jwUUc15Osh1zOnZCyAvxI9XHDUXQd3OP5A-WBGPERPQ__" />
-        <div style="width: 350px; height: 98px; left: 37px; top: 349px; position: absolute; color: #5A5A5A; font-size: 20px; font-family: Open Sans; font-weight: 600; word-wrap: break-word">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam </div>
-        <div style="width: 350px; height: 0px; left: 14px; top: 447px; position: absolute; border: 1px black solid"></div>
-        <img style="width: 50px; height: 50px; left: 51px; top: 459px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%); border-radius: 9999px" src="https://s3-alpha-sig.figma.com/img/8603/641e/fe5971f61696973bee626250bb8c1702?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bMBx1I6NPeE4drdHD0UB87G5QPCgvQLoHWQTPI3H2VG7lCY-SYygX4A94N3fpoTX-HVxQYcUQmlKwQP8o7yZ8fAYukY-WL2-jz85-IzNqw14yv2kVlKLHdxdExtYcvs1I46Yx9kZw8sRjBFOrNpFORSTx6AjPDWGJyT4weYMlJTgDpfTfKLgoTgfnmeuq2t1rwkRBBFa7AbNTQXPihHYvrOgXcXmiu7RWHX7WAF5kA5nTZjaRNJxC9KIROfdItK5W7VvDw-LaiHzWEaQWZD1Eb8dg3iDCta6IwakdmV1a38raWygOy8-dGaMBfk14WK5OZYZJqPkQwAVEkmSiYLiQQ__" />
-        <div style="left: 118px; top: 476px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 700; line-height: 16px; word-wrap: break-word">fatima manager</div>
-    </div>
-</div>
-
-<!-- Les Proteines -->
-<div style="left: 580px; top: 310%; position: absolute; color: black; font-size: 48px; font-family: Poppins; font-weight: 600; line-height: 35px; word-wrap: break-word">les proteines</div>
-<div class="row-container">
- <!-- premiére carte pour les proteines -->
-<div style="width: 400px; height: 528px; left: 60px; top: 322%; position: absolute">
-    <div style="width: 400px; height: 528px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-    <img style="width: 350px; height: 303px; left: 22px; top: 27px; position: absolute; border-radius: 20px" src="https://s3-alpha-sig.figma.com/img/adf2/a094/7b0c2d6913e245ae7dbc6e67e8ee64ba?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oBtvA9VpqgqD16z5dttcGaoaf8L2s43tFjl54OfoRGokvjV39Qgo8vO5Di85ArXQnZvvvzLOHaTC7qldxBw-3hRg1BkLTaS393Yt2JBC-Fs7PwwCneokYraMo5VdUXABGLvTKEn4qVIj0VVwmytCqj2VeeyUve11WZBGCXgw5CZANhkXX49mzPoddQu2s497BVE~YMx7vr171zmQeuDRXXSdmq76dld3Q6rDFnuvbgJkJu4psoKWde7Aen1bAnNmEgoYf9JkN2boFFaDqYt8monsQtr1mkUAxEarYbHh6uk4WuNToBs~rBa6jWVATvIzUoCRPA3eZfQAny1N5Jo6qA__" />
-    <div style="width: 350px; height: 98px; left: 37px; top: 349px; position: absolute; color: #5A5A5A; font-size: 20px; font-family: Open Sans; font-weight: 600; word-wrap: break-word">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam </div>
-    <div style="width: 350px; height: 0px; left: 14px; top: 447px; position: absolute; border: 1px black solid"></div>
-    <img style="width: 50px; height: 50px; left: 51px; top: 459px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%); border-radius: 9999px" src="https://s3-alpha-sig.figma.com/img/8603/641e/fe5971f61696973bee626250bb8c1702?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bMBx1I6NPeE4drdHD0UB87G5QPCgvQLoHWQTPI3H2VG7lCY-SYygX4A94N3fpoTX-HVxQYcUQmlKwQP8o7yZ8fAYukY-WL2-jz85-IzNqw14yv2kVlKLHdxdExtYcvs1I46Yx9kZw8sRjBFOrNpFORSTx6AjPDWGJyT4weYMlJTgDpfTfKLgoTgfnmeuq2t1rwkRBBFa7AbNTQXPihHYvrOgXcXmiu7RWHX7WAF5kA5nTZjaRNJxC9KIROfdItK5W7VvDw-LaiHzWEaQWZD1Eb8dg3iDCta6IwakdmV1a38raWygOy8-dGaMBfk14WK5OZYZJqPkQwAVEkmSiYLiQQ__" />
-    <div style="left: 118px; top: 476px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 700; line-height: 16px; word-wrap: break-word">fatima manager</div>
-</div>
-<!-- 2em carte pour les proteines -->
-<div style="width: 400px; height: 528px; left: 38%; top: 322%; position: absolute">
-    <div style="width: 400px; height: 528px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-    <img style="width: 350px; height: 303px; left: 22px; top: 27px; position: absolute; border-radius: 20px" src="https://s3-alpha-sig.figma.com/img/a9b3/c1d7/fb34cd0d93fb15a872b3013995fe6ec8?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GpU2se-pvPBC7b-JfjKU9iXEDVmLaM3LmnCgjO~d-geVna3QQEkTGRu3SpVTwaKqviEm~huW1wEE0GAO~~WcMp-ia9D0f5oXGZOxfmyP5kIJFyBszVPgLnp2-DcKt6Hbamb9MQ5Ki-bmfdMEvXcsDJmtY6-pGuB-IqX1gkisaCCo8AFtyvrv~94KAWu7NkZjdTzd4iKrlIZq02D5xLbEtKxEWreUrWNaQWMmya5VQsm~o8SHSCNiW4bXLlb62RolyVx5ZJ9~grHscWW7Ic-X~bZlm7g3NLMeu1jedKdDaMF30Isc~vOfvg6WRL3Wy2GBxmGthvXj5W8quA3JAE-Yiw__" />
-    <div style="width: 350px; height: 98px; left: 37px; top: 349px; position: absolute; color: #5A5A5A; font-size: 20px; font-family: Open Sans; font-weight: 600; word-wrap: break-word">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam </div>
-    <div style="width: 350px; height: 0px; left: 14px; top: 447px; position: absolute; border: 1px black solid"></div>
-    <img style="width: 50px; height: 50px; left: 51px; top: 459px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%); border-radius: 9999px" src="https://s3-alpha-sig.figma.com/img/8603/641e/fe5971f61696973bee626250bb8c1702?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bMBx1I6NPeE4drdHD0UB87G5QPCgvQLoHWQTPI3H2VG7lCY-SYygX4A94N3fpoTX-HVxQYcUQmlKwQP8o7yZ8fAYukY-WL2-jz85-IzNqw14yv2kVlKLHdxdExtYcvs1I46Yx9kZw8sRjBFOrNpFORSTx6AjPDWGJyT4weYMlJTgDpfTfKLgoTgfnmeuq2t1rwkRBBFa7AbNTQXPihHYvrOgXcXmiu7RWHX7WAF5kA5nTZjaRNJxC9KIROfdItK5W7VvDw-LaiHzWEaQWZD1Eb8dg3iDCta6IwakdmV1a38raWygOy8-dGaMBfk14WK5OZYZJqPkQwAVEkmSiYLiQQ__" />
-    <div style="left: 118px; top: 476px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 700; line-height: 16px; word-wrap: break-word">fatima manager</div>
-</div>
- <div style="width: 400px; height: 528px; left: 70%; top:322%; position: absolute">
-        <div style="width: 400px; height: 528px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-        <img style="width: 350px; height: 303px; left: 22px; top: 27px; position: absolute; border-radius: 20px" src="https://s3-alpha-sig.figma.com/img/3174/36d5/4f97e993767fbc1e3ad6bf1d0ae13540?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iSv6fQOSUPMzhtV2DbQ5FCslMlyCYO6gd~TFjRCx1dMkig8bX~fk3v9SweeFYSYOtoXhICHibeyWid6oyP5thYTtN-~1iHRfJCIM6b47ZNhXtQZFGL7qWuR10nGO3uRvq1~pQLHzFW8HPoCv8wMF4ZbysSHvaSFGIuOFBYEuYtx6vAdg2SIYQXlr8IKdcbM73bEeBgGLRowrN8A4OvIsj3d~fYzBiii~lp9y5q7uwxdDfU2Gw96b486GPKwaFId5G8yA657JjwKpnym2Y2ZwLLMLCZ6RrocBv3OIc5onEQDgW64qleUQ66rTymLJlojKVylUNePgsbTSz12ykJ8NwQ__" />
-        <div style="width: 350px; height: 98px; left: 37px; top: 349px; position: absolute; color: #5A5A5A; font-size: 20px; font-family: Open Sans; font-weight: 600; word-wrap: break-word">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam </div>
-        <div style="width: 350px; height: 0px; left: 14px; top: 447px; position: absolute; border: 1px black solid"></div>
-        <img style="width: 50px; height: 50px; left: 51px; top: 459px; position: absolute; background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%); border-radius: 9999px" src="https://s3-alpha-sig.figma.com/img/8603/641e/fe5971f61696973bee626250bb8c1702?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bMBx1I6NPeE4drdHD0UB87G5QPCgvQLoHWQTPI3H2VG7lCY-SYygX4A94N3fpoTX-HVxQYcUQmlKwQP8o7yZ8fAYukY-WL2-jz85-IzNqw14yv2kVlKLHdxdExtYcvs1I46Yx9kZw8sRjBFOrNpFORSTx6AjPDWGJyT4weYMlJTgDpfTfKLgoTgfnmeuq2t1rwkRBBFa7AbNTQXPihHYvrOgXcXmiu7RWHX7WAF5kA5nTZjaRNJxC9KIROfdItK5W7VvDw-LaiHzWEaQWZD1Eb8dg3iDCta6IwakdmV1a38raWygOy8-dGaMBfk14WK5OZYZJqPkQwAVEkmSiYLiQQ__" />
-        <div style="left: 118px; top: 476px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 700; line-height: 16px; word-wrap: break-word">fatima manager</div>
-</div>
-</div>
-
-
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/styles/bootstrap-4.1.2/popper.js"></script>
+<script src="assets/styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="assets/plugins/greensock/TweenMax.min.js"></script>
+<script src="assets/plugins/greensock/TimelineMax.min.js"></script>
+<script src="assets/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="assets/plugins/greensock/animation.gsap.min.js"></script>
+<script src="assets/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="assets/plugins/easing/easing.js"></script>
+<script src="assets/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="assetsjs/blog.js"></script>
+</body>
+</html>
