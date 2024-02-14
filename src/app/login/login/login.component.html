@@ -20,19 +20,19 @@
             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
           </div>
           <span>or use your email for registration</span>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <input type="text" placeholder="Name"  />
+          <input type="email" placeholder="Email"/>
+          <input type="password" placeholder="Password"/>
           <button></button>
         </form>
       </div>
       <div class="form-container sign-in-container">
         <form action="#">
           <h1></h1>
-          <input type="email" placeholder="Email"  name="email"/>
-          <input type="password" placeholder="Password" name="password"   />
+          <input type="email" placeholder="Email"  name="email" [(ngModel)]="fomdata.email"/>
+          <input type="password" placeholder="Password" name="password" [(ngModel)]="fomdata.password"/>
           <a [routerLink]="['/inscription']">veuillez vous-inscrire!</a>
-          <button >Se connectez</button>
+          <button (click)="connexion()">Se connectez</button>
         </form>
       </div>
       <div class="overlay-container">
