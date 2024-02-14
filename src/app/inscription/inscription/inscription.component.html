@@ -1,1 +1,29 @@
-<p>inscription works!</p>
+<!-- <p>inscription works!</p> -->
+<h2>Bienvenue!</h2>
+<div class="formulaire">
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1></h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <input type="text" name="prenom" placeholder="Prenom"/>
+                <input type="text" name="nom" placeholder="Nom" />
+                <input type="email" name="email" placeholder="email"/>
+                <input type="password" name="password" placeholder="Password" />
+                <button  [routerLink]="['/connexion']" routerLinkActive="router-link-active" >S'inscrire</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+     
+            <img src="https://s3-alpha-sig.figma.com/img/a035/2ee8/14c241dcad7ab9ffd82d7e66429ebde2?Expires=1707696000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RkfiILE6CoorTraCGVxFXu4MBbQnva4bdgrKMbu3VUtxmshv7wDfrP7IWlJL71V3wd7huctEj3wUGnpM-UkgNGPhXtgSdsIjjLGtILxJQ0mgR6rtqOuIl3rqX2vg1xhuvQz3YRRnVNEL8Th4wR3VAOKbZdMWgdPqtj9il5EtwzdzWGM4qaq-k5WUvIFXiCK5u0xp-uJ5N7ZwDAdBDCVOs8BCGUOvFp4VpIJs3mF0DxI9iimBHMZRrQNInNzD8yFr6A0ylwoeeT8wy0Ca0tcBouR9o~kvyjlgm1O79N9sMvh~VsTwgQNzpNDoTjEhaDfg7U2xhCUGJSOhHS4tlvq7dQ__" id="imag">
+            </div>
+    </div>
+</div>

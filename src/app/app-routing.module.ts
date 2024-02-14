@@ -14,6 +14,8 @@ import { SousCategorieComponent } from './dashboard-Admin/sous-categorie/sous-ca
 import { AdminAcceuilComponent } from './dashboard-Admin/admin-acceuil/admin-acceuil.component';
 import { LoginComponent } from './login/login/login.component';
 import { InscriptionComponent } from './inscription/inscription/inscription.component';
+import { DetailVideoComponent } from './interface-User/detail-video/detail-video.component';
+
 
 const routes: Routes = [
   {path:'',redirectTo: 'Acceuil' , pathMatch:'full',},
@@ -25,6 +27,7 @@ const routes: Routes = [
   { path: 'about-us', component:AboutUsComponent },
   { path: 'post', component:PostComponent},
   { path: 'inscription', component:InscriptionComponent},
+   {path: 'detail' , component:DetailVideoComponent},
 
 
   // route pour l'admin
