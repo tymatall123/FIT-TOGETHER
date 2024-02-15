@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/service.service';
@@ -45,4 +46,6 @@ export class LoginComponent {
    })
    
 }
+// redirection des pages
+
 }

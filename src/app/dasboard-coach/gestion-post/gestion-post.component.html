@@ -20,8 +20,8 @@
                   <span>Video</span>
                 </a>
               </li>
-              <li>
-                <a [routerLink]="['/post-admin']" class="active">
+              <li class="active">
+                <a [routerLink]="['/post-admin']">
                   <span class="fas fa-stream"></span>
                   <span>Post</span>
                 </a>
@@ -107,6 +107,8 @@
           </div>
 
         </div>
+        <!-- bouton ajout -->
+        <button class="btn" style="margin-top: 50px;">Ajouter</button>
 
       <div class="carte">
         <div class="card" *ngFor="let item of post" style="width: 18rem; margin-top: 100px;height: 25rem;">
@@ -144,3 +146,34 @@
       </main>
     </div>
 
+        <!-- formulaire pour l'ajout -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter-Regime</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Titre</label>
+                <input type="text" class="form-control" id="titre-name" name="titre" [(ngModel)]="titre">
+              </div>
+              <div class="mb-3">
+                <label for="image" class="col-form-label">Path_image</label>
+                 <input type="file" (change)="getFile($event)" accept="images_posts/*"  name="path_image" [(ngModel)]="path_image"/>
+              </div>
+              <div class="mb-3">
+                <label for="number" class="col-form-label">Contenu</label>
+                <input type="text" class="form-control" id="number" name="duree" [(ngModel)]="contenu" >
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn danger" data-bs-dismiss="modal">Annuler</button>
+            <button type="button" class="btn-btn" (click)="ajoutRegime()" >Ajouter</button>
+          </div>
+        </div>
+      </div>
+    </div>

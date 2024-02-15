@@ -38,7 +38,9 @@ import { FormsModule } from '@angular/forms';
     SousCategorieComponent,
     InscriptionComponent,
     DetailVideoComponent,
-    LoginComponent
+    LoginComponent,
+    
+   
     
     
   ],

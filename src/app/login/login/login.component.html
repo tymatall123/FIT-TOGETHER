@@ -32,13 +32,13 @@
           <input type="email" placeholder="Email"  name="email" [(ngModel)]="fomdata.email"/>
           <input type="password" placeholder="Password" name="password" [(ngModel)]="fomdata.password"/>
           <a [routerLink]="['/inscription']">veuillez vous-inscrire!</a>
-          <button (click)="connexion()">Se connectez</button>
+          <button (click)="connexion()" [routerLink]="['/Acceuil']">Se connectez</button>
         </form>
       </div>
-      <div class="overlay-container">
+      <div class="overlay-container" [routerLink]="['/admin']">
      
         <img src="https://s3-alpha-sig.figma.com/img/a035/2ee8/14c241dcad7ab9ffd82d7e66429ebde2?Expires=1707696000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RkfiILE6CoorTraCGVxFXu4MBbQnva4bdgrKMbu3VUtxmshv7wDfrP7IWlJL71V3wd7huctEj3wUGnpM-UkgNGPhXtgSdsIjjLGtILxJQ0mgR6rtqOuIl3rqX2vg1xhuvQz3YRRnVNEL8Th4wR3VAOKbZdMWgdPqtj9il5EtwzdzWGM4qaq-k5WUvIFXiCK5u0xp-uJ5N7ZwDAdBDCVOs8BCGUOvFp4VpIJs3mF0DxI9iimBHMZRrQNInNzD8yFr6A0ylwoeeT8wy0Ca0tcBouR9o~kvyjlgm1O79N9sMvh~VsTwgQNzpNDoTjEhaDfg7U2xhCUGJSOhHS4tlvq7dQ__" id="image">
-        </div>
+      </div>
     </div>
   </main>
   

@@ -423,3 +423,7 @@ td .status{
   }
 }
 /* les cartes */
+.contact{
+  display: flex;
+  gap: 10%;
+}

@@ -21,9 +21,9 @@
                 </a>
               </li>
             <li>
-              <a [routerLink]="['/post-admin']">
+              <a >
                 <span class="fas fa-stream"></span>
-              <span> Post</span>
+              <span [routerLink]="['/post-admin']"> Post</span>
               </a>
             </li>
             <li>
@@ -108,9 +108,13 @@
 
         </div>
 
+        <!-- bouton pour ajouter -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Ajouter</button>
+        <!-- fin bouton -->
+
       <div class="carte">
         <div class="card" style="width: 18rem; margin-top: 100px;height: 25rem;">
-            <img src="https://img.freepik.com/free-photo/portrait-young-sportive-girl-training-with-dumbbells-isolated-blue-background-neon_155003-45614.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" class="card-img-top" alt="...">
+          <iframe width="260" height="180" src="https://www.youtube.com/embed/wfxm7Sufd4Y" title="Avoir des Abdos en 2semaines ! (6min programme à la maison)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div class="card-body">
               <h1 class="card-title">Body-Sculpt</h1>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -120,7 +124,7 @@
             </div>
           </div>
           <div class="card" style="width: 18rem; margin-top: 100px;height: 25rem;">
-            <img src="https://img.freepik.com/free-photo/portrait-young-sportive-girl-training-with-dumbbells-isolated-blue-background-neon_155003-45614.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" class="card-img-top" alt="...">
+            <iframe width="260" height="180" src="https://www.youtube.com/embed/wfxm7Sufd4Y" title="Avoir des Abdos en 2semaines ! (6min programme à la maison)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div class="card-body">
               <h1 class="card-title">Body-Sculpt</h1>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -130,12 +134,15 @@
             </div>
           </div>
           <div class="card" style="width: 18rem; margin-top: 100px;height: 25rem;">
-            <img src="https://img.freepik.com/free-photo/portrait-young-sportive-girl-training-with-dumbbells-isolated-blue-background-neon_155003-45614.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" class="card-img-top" alt="...">
+            <iframe width="260" height="180" src="https://www.youtube.com/embed/wfxm7Sufd4Y" title="Avoir des Abdos en 2semaines ! (6min programme à la maison)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div class="card-body">
-              <h1 class="card-title">Body-Sculpt</h1>
+              <h1 class="card-title">Gym</h1>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <button class="btn">Modifier</button>
-             <button class="bouton">supprimer</button>
+              <div class="boutons">
+                <button class="btn">Modifier</button>
+                <button class="bouton ">supprimer</button>
+
+              </div>
 
             </div>
           </div>
@@ -144,3 +151,33 @@
       </main>
     </div>
 
+    <!-- formulaire d'ajout pour gestion video -->
+
+
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: flex; justify-content: center; align-items: center;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">annuler</button>
+            <button type="button" class="btn btn-primary">Ajouter</button>
+          </div>
+        </div>
+      </div>
+    </div>

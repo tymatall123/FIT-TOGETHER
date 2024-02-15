@@ -449,8 +449,7 @@ body {
   .bouton{
     width: 80px;
     height: 30px;
-    margin-top: 25px;
-    margin-left: 90px;
+    margin-left: 80px;
     border-radius: 50px;
     border: solid 2px #ff9711 ;
     background-color: white;

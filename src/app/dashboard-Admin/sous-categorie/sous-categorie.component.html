@@ -66,7 +66,7 @@
      </div>
     </div>
   </header>
-
+        
   <main>
     <div class="cards">
       <div class="card-single" style="border-right: 8px solid #ff9711;">
@@ -108,8 +108,7 @@
 
     </div>
     <!-- bouton pour l'ajout des catégorie -->
-    <button class="btn" style="margin-top: 50px;">Ajouter</button>
-    <!-- data table pour l'ajout des catégorie -->
+    <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" style="margin-top: 5%;">Ajouter</button>    <!-- data table pour l'ajout des catégorie -->
     <table class="table" style="margin-top: 50px;">
         <thead class="tout">
           <tr class="titre">
@@ -122,24 +121,70 @@
           <tr>
             <th scope="row">1</th>
             <td>Body-Sculpt</td>
-            <td><button class="modif">modifier</button>             <button class="mx-3">spprimer</button>
+            <td><button  class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" class="modif">modifier</button>             <button class="mx-3">spprimer</button>
             </td>
           </tr>
           <tr>
             <th scope="row">2</th>
             <td>Yoga</td>
-            <td><button class="modif">modifier</button>             <button class="mx-3">spprimer</button>
+            <td><button  class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" class="modif">modifier</button>             <button class="mx-3">spprimer</button>
             </td>
           </tr>
           <tr>
             <th scope="row">3</th>
             <td>Miles-Pilates</td>
-            <td><button class="modif">modifier</button>             <button class="mx-3">spprimer</button>
+            <td><button  class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" class="modif">modifier</button>             <button class="mx-3">spprimer</button>
             </td>
           </tr>
         </tbody>
       </table>
   </main>
 </div>
+<!-- Ajouter sous-Catégorie -->
 
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel">Ajouter-Catégorie</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Titre</label>
+            <input type="text" class="form-control" id="titre-name" name="titre" >
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn danger" data-bs-dismiss="modal">Annuler</button>
+        <button type="button" class="btn" style="background-color: white; border: #ff9711; color: #ff9711; border: 1px solid #ff9711;" >Modifier</button>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!-- modifier catégorie -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel">Ajouter-Catégorie</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Titre</label>
+            <input type="text" class="form-control" id="titre-name" name="titre" >
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn danger" data-bs-dismiss="modal">Annuler</button>
+        <button type="button" class="btn" style="background-color: white; border: #ff9711; color: #ff9711; border: 1px solid #ff9711;" >Modifier</button>
+      </div>
+    </div>
+  </div>
+</div>
