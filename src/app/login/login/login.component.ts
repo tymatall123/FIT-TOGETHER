@@ -1,7 +1,8 @@
-import Swal from 'sweetalert2';
+
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -42,10 +43,18 @@ export class LoginComponent {
    }
    this.authservice.login(datainput).subscribe((response : any)=>{
     console.log("voir info", response)
+    this.showMessage('success', 'Felicitation',` ${response.Message}`)
+    localStorage.setItem('token', response.Autorisation.Token )
     this.router.navigate(['/Acceuil'])
    })
    
 }
 // redirection des pages
-
+ showMessage(icon:any, titre:any, text: any) {
+    Swal.fire({
+      icon:icon,
+      title:titre,
+      text:text
+    })
+    }
 }

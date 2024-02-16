@@ -109,7 +109,7 @@
     </div>
     <!-- bouton pour l'ajout des catégorie -->
     <div class="" id="toto">
-      <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" style="margin-top: 5%;">Ajouter</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat" style="margin-top: 5%;">Ajouter</button>
     </div>   
     
     <!-- data table pour l'ajout des catégorie -->
@@ -122,24 +122,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let categories of categories">
+          <tr *ngFor="let categorie of categories">
             <th scope="row">1</th>
-            <td>{{categories}}</td>
+            <td>{{categorie.nom}}</td>
+            
             <td><button class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">modifier</button>             <button class="mx-3">spprimer</button>
             </td>
           </tr>
-          <!-- <tr>
-            <th scope="row">2</th>
-            <td>Yoga</td>
-            <td><button class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">modifier</button>             <button class="mx-3">spprimer</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Miles-Pilates</td>
-            <td><button class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">modifier</button>             <button class="mx-3">spprimer</button>
-            </td>
-          </tr> -->
         </tbody>
       </table>
   </main>
@@ -148,22 +137,25 @@
 <!-- formulaire pour l'ajout des catégories -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title fs-5" id="exampleModalLabel">Ajouter-Catégorie</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-content ">
+      <div class="modal-header" style="height:6vh">
+        <h3 class="modal-title fs-6" id="exampleModalLabel" style="margin-left: 2%;">Ajouter-Catégorie</h3>
+        <button type="button" class="btn-close" style="margin-right: 5%; margin-top: 5%;" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Titre</label>
-            <input type="text" class="form-control" id="titre-name" name="titre" >
-          </div>
-        </form>
+        <div class="" style="width: 95%; margin: 0 auto;">
+          <form>
+            <div class="mb-3 ">
+              <label for="recipient-name" class="col-form-label">Titre</label>
+              <input type="text" class="form-control " id="titre-name" name="titre" >
+            </div>
+          </form>
+
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn danger" data-bs-dismiss="modal">Annuler</button>
-        <button type="button" class="btn" style="background-color: white; border: #ff9711; color: #ff9711; border: 1px solid #ff9711;" >Ajouter</button>
+      <div class="modal-footer mb-2 pt-2" style="height: 6vh;" >
+        <button type="button" class="btn danger me-3" data-bs-dismiss="modal">Annuler</button>
+        <button type="button" class="btn m-3" style="background-color: white; border: #ff9711; color: #ff9711; border: 1px solid #ff9711;" >Ajouter</button>
       </div>
     </div>
   </div>
@@ -173,22 +165,25 @@
 <!-- formulaire pour la modification -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title fs-5" id="exampleModalLabel">Modifier-Catégorie</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-content ">
+      <div class="modal-header" style="height:6vh">
+        <h3 class="modal-title fs-6" id="exampleModalLabel" style="margin-left: 2%;">Modifier-Catégorie</h3>
+        <button type="button" class="btn-close" style="margin-right: 5%; margin-top: 5%;" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Titre</label>
-            <input type="text" class="form-control" id="titre-name" name="titre" >
-          </div>
-        </form>
+        <div class="" style="width: 95%; margin: 0 auto;">
+          <form>
+            <div class="mb-3 ">
+              <label for="recipient-name" class="col-form-label">Titre</label>
+              <input type="text" class="form-control " id="titre-name" name="titre" >
+            </div>
+          </form>
+
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn danger" data-bs-dismiss="modal">Annuler</button>
-        <button type="button" class="btn" style="background-color: white; border: #ff9711; color: #ff9711; border: 1px solid #ff9711;" >Modifier</button>
+      <div class="modal-footer mb-2 pt-2" style="height: 6vh;" >
+        <button type="button" class="btn danger me-3" data-bs-dismiss="modal">Annuler</button>
+        <button type="button" class="btn m-3" style="background-color: white; border: #ff9711; color: #ff9711; border: 1px solid #ff9711;" >Modifier</button>
       </div>
     </div>
   </div>

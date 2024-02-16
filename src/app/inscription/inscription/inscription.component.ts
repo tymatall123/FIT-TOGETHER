@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-inscription',
@@ -45,7 +46,8 @@ export class InscriptionComponent {
       this.authService.register(user).subscribe(
         (data) => {
           console.log("la reponse du service est :",data);
-          this.showMessage('success', 'Felicitation', 'Bienvenu dans Fit-Together')
+          
+          this.showMessage('success', 'Felicitation', 'utilisateur inscris avec succés')
         }
       )
     }
@@ -53,8 +55,12 @@ export class InscriptionComponent {
   user(user: any) {
     throw new Error('Method not implemented.');
   }
-  showMessage(arg0: string, arg1: string, arg2: string) {
-    throw new Error('Method not implemented.');
-  }
+  showMessage(icon:any, titre:any, text: any) {
+    Swal.fire({
+      icon:icon,
+      title:titre,
+      text:text
+    })
+    }
 
 }

@@ -8,28 +8,31 @@ import { CategorieService } from 'src/app/services/categorie.service';
   styleUrls: ['./gestion-categorie.component.css']
 })
 export class GestionCategorieComponent implements OnInit {
-  formdata =  {
-    categorie: '',
-    
+  formdata = {
+    categories: '',
+
   }
-  categories: any;
+  categories: any[] = [];;
+  constructor(private router: Router, private CategorieService: CategorieService) { }
 
-  constructor(private router:Router, private CategorieService : CategorieService){}
+  ngOnInit(): void {
+    this.listecategorie();
+  }
 
-ngOnInit(): void {
-  this.listecategorie();
-}
+  listecategorie() {
+    this.CategorieService.getcategorie().subscribe((reponse) => {
+      this.categories = reponse
+      console.log(this.categories, 'fghjcg')
 
-listecategorie(){
-this.CategorieService.getcategorie().subscribe((reponse:any)=>{
-  console.log(reponse)
-  this.categories=reponse.categorie
-  console.log(this.categories)
-})
-
-}
-
-
-
+      console.log(typeof(reponse));
+      
+    })
+  }
 
 }
+
+
+
+
+
+

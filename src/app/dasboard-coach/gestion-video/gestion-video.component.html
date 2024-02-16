@@ -65,6 +65,9 @@
          </div>
         </div>
       </header>
+        
+            <!-- bouton pour l'ajout des catégorie -->
+    
 
       <main>
 
@@ -108,9 +111,10 @@
 
         </div>
 
-        <!-- bouton pour ajouter -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Ajouter</button>
-        <!-- fin bouton -->
+        <!-- les cartes pour ajouter les vidéos -->
+    <div class="" id="toto">
+      <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" style="margin-top: 12%;">Ajouter</button>
+    </div>
 
       <div class="carte">
         <div class="card" style="width: 18rem; margin-top: 100px;height: 25rem;">
@@ -155,29 +159,38 @@
 
 
     
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: flex; justify-content: center; align-items: center;">
+    <!-- formulaire pour l'ajout -->
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter-vidéo</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form>
               <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <label for="recipient-name" class="col-form-label">Titre</label>
+                <input type="text" class="form-control" id="titre-name" name="titre" [(ngModel)]="titre">
               </div>
               <div class="mb-3">
-                <label for="message-text" class="col-form-label">Message:</label>
-                <textarea class="form-control" id="message-text"></textarea>
+                <label for="image" class="col-form-label">Path_video</label>
+                 <input type="file" (change)="onFileSelected($event)" accept="video/*"  name="path_video" [(ngModel)]="path_video"/>
+              </div>
+              <div class="mb-3">
+                <label for="number" class="col-form-label">duree</label>
+                <input type="text" class="form-control" id="number" name="duree" [(ngModel)]="duree" >
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Sous_catégorie</label>
+                <input type="text" class="form-control" id="sous_categorie_id- name" name="sous_categorie_id" [(ngModel)]="sous_categorie_id">
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">annuler</button>
-            <button type="button" class="btn btn-primary">Ajouter</button>
+            <button type="button" class="btn danger" data-bs-dismiss="modal">Annuler</button>
+            <button type="button" class="btn-btn" (click)="sendVideo()">Ajouter</button>
           </div>
         </div>
       </div>
-    </div>
+    </div -->

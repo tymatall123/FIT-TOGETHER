@@ -14,7 +14,7 @@ export class CategorieService {
   }
    // methode pour recuperer tous les catégorie
 getcategorie() : Observable<any>{
-return this.http.get< any>(`https://swagger.imaletbenji.com/api/categories`);
+return this.http.get<any>(`https://swagger.imaletbenji.com/api/categories`);
 }
 
 // methode pour ajouter donnée ves l'api
