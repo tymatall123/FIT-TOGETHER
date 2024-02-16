@@ -6,6 +6,10 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class ServiceService {
+  getcategorie() {
+    throw new Error('Method not implemented.');
+  }
+
 
   constructor(private http:HttpClient) {
   }

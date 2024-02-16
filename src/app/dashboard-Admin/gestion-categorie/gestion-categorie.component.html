@@ -122,13 +122,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let categories of categories">
             <th scope="row">1</th>
-            <td>Body-Sculpt</td>
+            <td>{{categories}}</td>
             <td><button class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">modifier</button>             <button class="mx-3">spprimer</button>
             </td>
           </tr>
-          <tr>
+          <!-- <tr>
             <th scope="row">2</th>
             <td>Yoga</td>
             <td><button class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">modifier</button>             <button class="mx-3">spprimer</button>
@@ -139,7 +139,7 @@
             <td>Miles-Pilates</td>
             <td><button class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">modifier</button>             <button class="mx-3">spprimer</button>
             </td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
   </main>
