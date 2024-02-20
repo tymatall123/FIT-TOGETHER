@@ -115,7 +115,7 @@
     <!-- data table pour l'ajout des catégorie -->
     <table class="table" style="margin-top: 50px;">
         <thead class="tout">
-          <tr class="titre">
+          <tr  class="titre">
             <th scope="col">#</th>
             <th scope="col">Nom</th>
             <th scope="col">Action</th>
@@ -124,9 +124,9 @@
         <tbody>
           <tr *ngFor="let categorie of categories">
             <th scope="row">1</th>
-            <td>{{categorie.nom}}</td>
+            <td>{{categorie.categorie}}</td>
             
-            <td><button class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">modifier</button>             <button class="mx-3">spprimer</button>
+            <td><button class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal-mof" data-bs-whatever="@mdo" (click)="chargerInfo(categorie)">modifier</button>             <button class="mx-3">spprimer</button>
             </td>
           </tr>
         </tbody>
@@ -147,7 +147,7 @@
           <form>
             <div class="mb-3 ">
               <label for="recipient-name" class="col-form-label">Titre</label>
-              <input type="text" class="form-control " id="titre-name" name="titre" >
+              <input type="text" class="form-control " id="titre-name" name="titre" [(ngModel)]="titre" >
             </div>
           </form>
 
@@ -155,7 +155,7 @@
       </div>
       <div class="modal-footer mb-2 pt-2" style="height: 6vh;" >
         <button type="button" class="btn danger me-3" data-bs-dismiss="modal">Annuler</button>
-        <button type="button" class="btn m-3" style="background-color: white; border: #ff9711; color: #ff9711; border: 1px solid #ff9711;" >Ajouter</button>
+        <button type="button" class="btn m-3" style="background-color: white; border: #ff9711; color: #ff9711; border: 1px solid #ff9711;" (click)="ajoutcategorie()" >Ajouter</button>
       </div>
     </div>
   </div>
@@ -163,7 +163,7 @@
 
 
 <!-- formulaire pour la modification -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal-mof" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content ">
       <div class="modal-header" style="height:6vh">
@@ -175,7 +175,7 @@
           <form>
             <div class="mb-3 ">
               <label for="recipient-name" class="col-form-label">Titre</label>
-              <input type="text" class="form-control " id="titre-name" name="titre" >
+              <input type="text" class="form-control " id="titre-name" name="titre" [(ngModel)]="titre">
             </div>
           </form>
 
@@ -183,7 +183,7 @@
       </div>
       <div class="modal-footer mb-2 pt-2" style="height: 6vh;" >
         <button type="button" class="btn danger me-3" data-bs-dismiss="modal">Annuler</button>
-        <button type="button" class="btn m-3" style="background-color: white; border: #ff9711; color: #ff9711; border: 1px solid #ff9711;" >Modifier</button>
+        <button type="button" class="btn m-3" style="background-color: white; border: #ff9711; color: #ff9711; border: 1px solid #ff9711;" (click)="modifierCategorie()" >Modifier</button>
       </div>
     </div>
   </div>

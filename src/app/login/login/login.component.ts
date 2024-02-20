@@ -20,10 +20,10 @@ export class LoginComponent {
   // route: any;
   
 
-  fomdata = {
-    email : '',
-    password : '',
-  }
+  
+    email :string= '';
+    password : string= '';
+  
  
 
   constructor(private router:Router, private authservice : AuthService){}
@@ -36,16 +36,28 @@ export class LoginComponent {
 
 
   connexion() : void{
-    console.log("data", this.fomdata)
-   const datainput = {
-    email: this.fomdata.email,
-    password :this.fomdata.password,
-   }
+    const datainput = {
+      email: this.email,
+      password :this.password,
+    }
+    console.log("data", this.email)
    this.authservice.login(datainput).subscribe((response : any)=>{
     console.log("voir info", response)
-    this.showMessage('success', 'Felicitation',` ${response.Message}`)
     localStorage.setItem('token', response.Autorisation.Token )
-    this.router.navigate(['/Acceuil'])
+    if(response.Autorisation.Token){
+      console.log(response.Autorisation.User)
+      this.showMessage('success', 'Felicitation','Bienvenu sur Fit-Together');
+      if(response.Autorisation.User.role_id.role=='ROLE_USER'){   
+        this.router.navigate(['/Acceuil'])
+      }
+
+    } 
+    if(response.Autorisation.User.role_id.role=='ROLE_COACH'){  
+      this.router.navigate(['/admin'])
+    }
+    if(response.Autorisation.User.role_id.role=='ROLE_ADMIN'){  
+      this.router.navigate(['/adminG'])
+    }
    })
    
 }
@@ -57,4 +69,14 @@ export class LoginComponent {
       text:text
     })
     }
-}
+  // methode pour la déconnection
+
+  logout(): void {
+    // Effacer les informations de connexion 
+    localStorage.removeItem('token');
+
+    // Rediriger vers la page de connexion
+    this.router.navigate(['/connexion']);
+  }
+    }
+

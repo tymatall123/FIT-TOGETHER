@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
+  router: any;
 
   constructor(private http:HttpClient) {
   }
@@ -16,4 +17,13 @@ export class AuthService {
   login(user:any){
     return this.http.post(`https://swagger.imaletbenji.com/api/login`, user)
   }
+
+  // Méthode pour la déconnection.
+  logout(user:any){
+    return this.http.post(`https://swagger.imaletbenji.com/api/logout`, user)
+  }
 }
+
+
+
+

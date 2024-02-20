@@ -118,9 +118,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let souscategorie of souscategories">
             <th scope="row">1</th>
-            <td>Body-Sculpt</td>
+            <td>{{souscategorie.id}}</td>
+            <td>{{souscategorie.nom}}</td>
             <td><button  class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" class="modif">modifier</button>             <button class="mx-3">spprimer</button>
             </td>
           </tr>
