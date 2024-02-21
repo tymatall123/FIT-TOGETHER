@@ -126,7 +126,8 @@
             <th scope="row">1</th>
             <td>{{categorie.categorie}}</td>
             
-            <td><button class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal-mof" data-bs-whatever="@mdo" (click)="chargerInfo(categorie)">modifier</button>             <button class="mx-3">spprimer</button>
+            <td><button class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal-mof" data-bs-whatever="@mdo" (click)="chargerInfo(categorie)">modifier</button>             
+              <button class="mx-3" (click)="supprimerCategorie(categorie.id)">spprimer</button>
             </td>
           </tr>
         </tbody>

@@ -64,9 +64,21 @@ export class CategorieService {
     }
   }
 
-  // methode pour supprimer categorie
-  deletecategorie(id: any) {
-    return this.http.delete(`https://swagger.imaletbenji.com/api/categorie/categorie/delete/ {id}`)
+  
+  // on ajoute le token pour la suppression
+  deletecategorie(id: string): Observable<any> {
+    const Token = localStorage.getItem('token');
+
+    console.log(Token);
+
+
+    if (Token) {
+      const headers = new HttpHeaders({ 'Authorization': `Bearer ${Token}` });
+      return this.http.delete<any>('https://swagger.imaletbenji.com/api/categorie/' + id, { headers });
+
+    } else {
+      return of(null);
+    }
   }
 
 }

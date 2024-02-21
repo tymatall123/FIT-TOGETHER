@@ -8,11 +8,11 @@ import { SousCategorieService } from 'src/app/services/sous-categorie.service';
 })
 export class SousCategorieComponent {
   formdata = {
-    souscategories:'',
+    sous_categories:'',
     categorie_id :'',
-
   }
-  categories: any[] = [];souscategories: any;
+
+  souscategories: any[] = [];
 souscategorie: any;
 ;
   constructor(private router: Router, private SousCategorieService: SousCategorieService) { }
@@ -24,7 +24,7 @@ souscategorie: any;
   listesouscategorie() {
     this.SousCategorieService.getsouscategorie().subscribe((reponse) => {
       this.souscategories = reponse.sousCategories
-      console.log(this.categories, 'sous-categorie')
+      console.log(this.souscategorie, 'souscategorie')
 
       // console.log(typeof(reponse),'fdfzffz');
       
@@ -48,7 +48,7 @@ souscategorie: any;
     // méthode pour la modification
 modifiersousCategorie(CategorieId: string): void {
   const categorieToUpdate = {
-    titre: this.formdata.souscategories,
+    titre: this.formdata.sous_categories,
     // Autres champs à mettre à jour si nécessaire
   };
 

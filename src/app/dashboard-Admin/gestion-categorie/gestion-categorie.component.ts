@@ -83,6 +83,7 @@ supprimerCategorie(CategorieId: string): void {
     this.CategorieService.deletecategorie(CategorieId).subscribe(
       (data: any) => {
         console.log("Suppression réussie", data);
+        this.listecategorie();
         // Actualiser les données
       },
       (error) => {

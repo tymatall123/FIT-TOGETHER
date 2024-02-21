@@ -17,18 +17,23 @@ getsouscategorie() : Observable<any>{
 return this.http.get<any>(`https://swagger.imaletbenji.com/api/sous-categories`);
 }
 
-// methode pour ajouter donnée ves l'api
-addsouscategorie(categorie : any) {
-return this.http.post<any>(`https://swagger.imaletbenji.com/api/sous-categorie`, this.souscategorie);
-}
+// methode pour ajouter 
+// addsouscategorie(categorie : any) {
+// return this.http.post<any>(`https://swagger.imaletbenji.com/api/sous-categorie`, this.souscategorie);
+// }
 
-addsoouscategorie(data: any):Observable<any>{
-const Token = localStorage.getItem('access_token');
+addsouscategorie(data: any): Observable<any> {
+  const Token = localStorage.getItem('token');
 
-return Token?
-this.http.post<any>( `https://swagger.imaletbenji.com/api/sous-categorie`, data,{
-    headers: new HttpHeaders({ 'Authorization': `Bearer {Token} `})
-  }) : of(null);
+  console.log(Token);
+
+
+  if (Token) {
+    const headers = new HttpHeaders({ 'Authorization': `Bearer ${Token}` });
+    return this.http.post<any>('https://swagger.imaletbenji.com/api/sous-categorie', data, { headers });
+  } else {
+    return of(null);
+  }
 }
 
 getsouscategorieById(id: string): Observable<any> {

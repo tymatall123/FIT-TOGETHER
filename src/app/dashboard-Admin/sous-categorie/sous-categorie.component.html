@@ -108,7 +108,7 @@
 
     </div>
     <!-- bouton pour l'ajout des catégorie -->
-    <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" style="margin-top: 5%;">Ajouter</button>    <!-- data table pour l'ajout des catégorie -->
+    <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" style="margin-top: 5%;" (click)=" ajoutsouscategorie()">Ajouter</button>    <!-- data table pour l'ajout des catégorie -->
     <table class="table" style="margin-top: 50px;">
         <thead class="tout">
           <tr class="titre">
@@ -120,23 +120,25 @@
         <tbody>
           <tr *ngFor="let souscategorie of souscategories">
             <th scope="row">1</th>
-            <td>{{souscategorie.id}}</td>
             <td>{{souscategorie.nom}}</td>
-            <td><button  class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" class="modif">modifier</button>             <button class="mx-3">spprimer</button>
+            <td>{{souscategorie.categorie.nom}}</td>
+            <td><button  class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" class="modif">modifier</button>             
+              <button class="mx-3">spprimer</button>
             </td>
           </tr>
-          <tr>
+          <!-- <tr>
             <th scope="row">2</th>
             <td>Yoga</td>
-            <td><button  class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" class="modif">modifier</button>             <button class="mx-3">spprimer</button>
+            <td><button  class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" class="modif">modifier</button>            
+               <button class="mx-3">spprimer</button>
             </td>
-          </tr>
-          <tr>
+          </tr> -->
+          <!-- <tr>
             <th scope="row">3</th>
             <td>Miles-Pilates</td>
             <td><button  class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" class="modif">modifier</button>             <button class="mx-3">spprimer</button>
             </td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
   </main>
