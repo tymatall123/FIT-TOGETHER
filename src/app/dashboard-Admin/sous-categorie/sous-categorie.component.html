@@ -108,37 +108,26 @@
 
     </div>
     <!-- bouton pour l'ajout des catégorie -->
-    <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" style="margin-top: 5%;" (click)=" ajoutsouscategorie()">Ajouter</button>    <!-- data table pour l'ajout des catégorie -->
+    <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" style="margin-top: 5%;" >Ajouter</button>    <!-- data table pour l'ajout des catégorie -->
     <table class="table" style="margin-top: 50px;">
         <thead class="tout">
           <tr class="titre">
             <th scope="col">#</th>
-            <th scope="col">Nom</th>
+            <th scope="col">Sous_Catégorie</th>
+            <th scope="col">catégorie</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let souscategorie of souscategories">
             <th scope="row">1</th>
-            <td>{{souscategorie.nom}}</td>
-            <td>{{souscategorie.categorie.nom}}</td>
-            <td><button  class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" class="modif">modifier</button>             
-              <button class="mx-3">spprimer</button>
+            <td>{{ souscategorie.sous_categorie }}</td>
+            <td>{{ souscategorie.categorie_id.categorie }}</td>
+            <td>
+              <button class="modif" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Modifier</button>             
+              <button class="mx-3">Supprimer</button>
             </td>
           </tr>
-          <!-- <tr>
-            <th scope="row">2</th>
-            <td>Yoga</td>
-            <td><button  class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" class="modif">modifier</button>            
-               <button class="mx-3">spprimer</button>
-            </td>
-          </tr> -->
-          <!-- <tr>
-            <th scope="row">3</th>
-            <td>Miles-Pilates</td>
-            <td><button  class="modif"  type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" class="modif">modifier</button>             <button class="mx-3">spprimer</button>
-            </td>
-          </tr> -->
         </tbody>
       </table>
   </main>
@@ -156,8 +145,14 @@
         <div class="" style="width: 95%; margin: 0 auto;">
           <form>
             <div class="mb-3 ">
-              <label for="recipient-name" class="col-form-label">Titre</label>
-              <input type="text" class="form-control " id="titre-name" name="titre" >
+              <label for="recipient-name" class="col-form-label">Sous_Catégorie</label>
+              <input type="text" class="form-control " id="titre-name" name="titre" [(ngModel)]="souscategorie">
+            </div>
+            <div class="mb-3 ">
+              <label for="recipient-name" class="col-form-label">catégorie</label>
+              <select [(ngModel)]="cat_id" name="categorie">
+                <option   *ngFor="let cat of souscategories"  [value]="cat.categorie_id.id">{{cat.categorie_id.categorie}}</option>
+              </select>
             </div>
           </form>
 
@@ -165,14 +160,14 @@
       </div>
       <div class="modal-footer mb-2 pt-2" style="height: 6vh;" >
         <button type="button" class="btn danger me-3" data-bs-dismiss="modal">Annuler</button>
-        <button type="button" class="btn m-3" style="background-color: white; border: #ff9711; color: #ff9711; border: 1px solid #ff9711;" >Ajouter</button>
+        <button type="button" class="btn m-3" style="background-color: white; border: #ff9711; color: #ff9711; border: 1px solid #ff9711;" (click)=" ajoutsouscategorie()">Ajouter</button>
       </div>
     </div>
   </div>
 </div>
 
 <!-- modifier catégorie -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content ">
       <div class="modal-header" style="height:6vh">
@@ -183,8 +178,14 @@
         <div class="" style="width: 95%; margin: 0 auto;">
           <form>
             <div class="mb-3 ">
-              <label for="recipient-name" class="col-form-label">Titre</label>
-              <input type="text" class="form-control " id="titre-name" name="titre" >
+              <label for="recipient-name" class="col-form-label">Sous_Catégorie</label>
+              <input type="text" class="form-control " id="titre-name" name="titre" [(ngModel)="souscategorie">
+            </div>
+            <div class="mb-3 ">
+              <label for="recipient-name" class="col-form-label">catégorie</label>
+              <select [(ngModel)]="cat_id" name="categorie">
+                <option   *ngFor="let cat of souscategories"  [value]="cat.categorie_id.id">{{cat.categorie_id.categorie}}</option>
+              </select>
             </div>
           </form>
 
@@ -196,4 +197,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

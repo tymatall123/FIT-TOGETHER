@@ -7,76 +7,46 @@ import { SousCategorieService } from 'src/app/services/sous-categorie.service';
   styleUrls: ['./sous-categorie.component.css']
 })
 export class SousCategorieComponent {
-  formdata = {
-    sous_categories:'',
-    categorie_id :'',
-  }
 
-  souscategories: any[] = [];
-souscategorie: any;
-;
-  constructor(private router: Router, private SousCategorieService: SousCategorieService) { }
+souscategories: any[] = [];
+cat_id:any;
 
-  ngOnInit(): void {
-    this.listesouscategorie();
-  }
 
-  listesouscategorie() {
-    this.SousCategorieService.getsouscategorie().subscribe((reponse) => {
-      this.souscategories = reponse.sousCategories
-      console.log(this.souscategorie, 'souscategorie')
+constructor(private router: Router, private SousCategorieService: SousCategorieService) { }
 
-      // console.log(typeof(reponse),'fdfzffz');
-      
-    })
-  }
+ngOnInit(): void {
+  this.listesouscategorie();
+}
+
+listesouscategorie() {
+  this.SousCategorieService.getsouscategorie().subscribe((reponse) => {
+    this.souscategories = reponse.data;
+    console.log(this.souscategories, 'sous_categorie');
+  });
+}
   // méthode pour ajouter sous-catégorie
-    ajoutsouscategorie(){
-      let formdata = new FormData();
-  formdata.set('titre',this.souscategorie);
-  
-  this.SousCategorieService.addsouscategorie(formdata).subscribe(
-    (reponse: any) => {
-      console.log("Ajout sous-catégorie réussi", reponse);
-    },
-    (error) => {
-      console.error("Erreur lors de l'ajout:", error);
-    }
-  );
-    }
+  souscategorie: string = "";
 
-    // méthode pour la modification
-modifiersousCategorie(CategorieId: string): void {
-  const categorieToUpdate = {
-    titre: this.formdata.sous_categories,
-    // Autres champs à mettre à jour si nécessaire
-  };
-
-  this.SousCategorieService.updatesouscategorie(CategorieId, categorieToUpdate).subscribe(
-    (data: any) => {
-      console.log("Modification réussie", data);
-      window.location.reload();
-    },
-    (error) => {
-      console.error("Erreur lors de la modification:", error);
-    }
-  );
-}
-
-//méthode pour la suppression
-supprimerCategorie(CategorieId: string): void {
-  // Demander une confirmation avant de supprimer la catégorie
-  const confirmation = confirm("Êtes-vous sûr de vouloir supprimer cette catégorie ?");
-  if (confirmation) {
-    this.SousCategorieService.deletesouscategorie(CategorieId).subscribe(
-      (data: any) => {
-        console.log("Suppression réussie", data);
-        // Actualiser les données
-      },
-      (error) => {
-        console.error("Erreur lors de la suppression:", error);
-      }
-    );
+  ajoutsouscategorie(){
+   const data = {
+    "sous_categorie": this.souscategorie,
+    "categorie_id":parseInt(this.cat_id)
+    
   }
-}
+
+  console.log(data);
+  
+this.SousCategorieService.addsouscategorie(data).subscribe(
+  (reponse) => {
+    console.log("Ajout catégorie réussi", reponse);
+    this.listesouscategorie();
+  },
+  (error) => {
+    console.error("Erreur lors de l'ajout:", error);
+  }
+);
+  }
+
+  // méthode pour la modification
+  
 }
