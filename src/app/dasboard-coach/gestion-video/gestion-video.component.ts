@@ -37,7 +37,7 @@ listeVideo(){
 this.videoService.getvideos().subscribe((reponse:any)=>{
   console.log(reponse)
   this.videos=reponse.Videos
-  console.log(this.videos)
+  console.log(this.videos, "les videos")
 })
 
 }

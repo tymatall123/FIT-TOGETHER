@@ -77,7 +77,6 @@ modifierCategorie(): void {
 
 //méthode pour la suppression
 supprimerCategorie(CategorieId: string): void {
-  // Demander une confirmation avant de supprimer la catégorie
   const confirmation = confirm("Êtes-vous sûr de vouloir supprimer cette catégorie ?");
   if (confirmation) {
     this.CategorieService.deletecategorie(CategorieId).subscribe(

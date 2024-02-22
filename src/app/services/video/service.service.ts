@@ -6,7 +6,7 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class ServiceService {
-  getcategorie() {
+  getvideo() {
     throw new Error('Method not implemented.');
   }
 

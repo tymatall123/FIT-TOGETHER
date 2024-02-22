@@ -42,7 +42,18 @@ return this.http.get<any>(`{https://swagger.imaletbenji.com/api/categorie}/getca
 
  // methode pour modifier donnée vers l'api
 editsouscategorie(id : any, categorie:any){
-return this.http.put(`{}/categorie/edit/ {id}`, this.souscategorie)
+  const Token = localStorage.getItem('token');
+
+  console.log(Token);
+
+
+  if (Token) {
+    const headers = new HttpHeaders({ 'Authorization': `Bearer ${Token}` });
+    return this.http.post<any>(`https://swagger.imaletbenji.com/api/sous-categorie/${id}`, categorie, { headers });
+  } else {
+    return of(null);
+  }
+
 }
 
 // mis a jour d'une categorie
@@ -51,7 +62,18 @@ return this.http.put<any>('https://api.example.com/categories/' + id, categorie)
 }
 
 // methode pour supprimer categorie
-deletesouscategorie(id: any) {
-return this.http.delete(`{https://swagger.imaletbenji.com/api/categories/}/categorie/delete/ {id}`)
+deletesouscategorie(id: string): Observable<any> {
+  const Token = localStorage.getItem('token');
+
+  console.log(Token);
+
+
+  if (Token) {
+    const headers = new HttpHeaders({ 'Authorization': `Bearer ${Token}` });
+    return this.http.delete<any>('https://swagger.imaletbenji.com/api/sous-categorie/' + id, { headers });
+
+  } else {
+    return of(null);
+  }
 }
 }

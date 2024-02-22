@@ -10,6 +10,8 @@ export class SousCategorieComponent {
 
 souscategories: any[] = [];
 cat_id:any;
+souscategorie:any;
+
 
 
 constructor(private router: Router, private SousCategorieService: SousCategorieService) { }
@@ -25,7 +27,7 @@ listesouscategorie() {
   });
 }
   // méthode pour ajouter sous-catégorie
-  souscategorie: string = "";
+  
 
   ajoutsouscategorie(){
    const data = {
@@ -47,6 +49,50 @@ this.SousCategorieService.addsouscategorie(data).subscribe(
 );
   }
 
-  // méthode pour la modification
+  showMessage(arg0: string, arg1: string, arg2: string) {
+    throw new Error('Method not implemented.');
+  }
+
+  scategorie:any;
+ chargeInfo(souscat:any){
+  this.scategorie=souscat;
+  this.souscategorie=this.scategorie.sous_categorie;
+  // this.souscategorie=souscat;
+  this.cat_id=this.scategorie.categorie_id.id;
+
+ }
   
+// méthode pour la modification
+modifierCategorie(): void {
+  const souscategorieToUpdate = {   "sous_categorie":this.souscategorie , "categorie_id":this.cat_id};
+ 
+ 
+  console.log(souscategorieToUpdate)
+  this.SousCategorieService.editsouscategorie(this.scategorie.id, souscategorieToUpdate).subscribe(
+    (data: any) => {
+      console.log("Modification réussie", data);
+      window.location.reload();
+    },
+    (error) => {
+      console.error("Erreur lors de la modification:", error);
+    }
+  );
+}
+  // méthode pour la suppression
+  
+  supprimersousCategorie(id:string): void {
+    const confirmation = confirm("Êtes-vous sûr de vouloir supprimer cette catégorie ?");
+    if (confirmation) {
+      this.SousCategorieService.deletesouscategorie(id).subscribe(
+        (data: any) => {
+          console.log("Suppression réussie", data);
+          this.listesouscategorie();
+          // Actualiser les données
+        },
+        (error) => {
+          console.error("Erreur lors de la suppression:", error);
+        }
+      );
+    }
+  }
 }

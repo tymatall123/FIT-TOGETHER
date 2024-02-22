@@ -117,17 +117,20 @@
     </div>
 
       <div class="carte">
-        <div class="card" style="width: 18rem; margin-top: 100px;height: 25rem;">
-          <iframe width="260" height="180" src="https://www.youtube.com/embed/wfxm7Sufd4Y" title="Avoir des Abdos en 2semaines ! (6min programme à la maison)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="card"  *ngFor="let video of videos" style="width: 18rem; margin-top: 100px;height: 25rem;">
+          <video controls>
+            <source src="https://swagger.imaletbenji.com/{{video.path_video}}" type="video/mp4">
+            Image non supporté
+        </video>
             <div class="card-body">
-              <h1 class="card-title">Body-Sculpt</h1>
+              <h4 class="card-title">{{video.titre}}</h4>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
              <button class="btn">Modifier</button>
              <button class="bouton">supprimer</button>
 
             </div>
           </div>
-          <div class="card" style="width: 18rem; margin-top: 100px;height: 25rem;">
+          <!-- <div class="card" style="width: 18rem; margin-top: 100px;height: 25rem;">
             <iframe width="260" height="180" src="https://www.youtube.com/embed/wfxm7Sufd4Y" title="Avoir des Abdos en 2semaines ! (6min programme à la maison)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div class="card-body">
               <h1 class="card-title">Body-Sculpt</h1>
@@ -149,7 +152,7 @@
               </div>
 
             </div>
-          </div>
+          </div> -->
 
       </div>
       </main>
@@ -160,7 +163,7 @@
 
     
     <!-- formulaire pour l'ajout -->
-    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -193,4 +196,4 @@
           </div>
         </div>
       </div>
-    </div -->
+    

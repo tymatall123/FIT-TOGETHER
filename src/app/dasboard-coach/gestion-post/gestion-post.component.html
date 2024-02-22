@@ -112,13 +112,12 @@
 
       <div class="carte">
         <div class="card" *ngFor="let item of post" style="width: 18rem; margin-top: 100px;height: 25rem;">
-            <img src="https://swagger.imaletbenji.com/api/post{{path_image}}" class="card-img-top" alt="...">
+            <img src="https://swagger.imaletbenji.com/api/{{post.path_image}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h1 class="card-title">lait</h1>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
              <button class="btn">Modifier</button>
              <button class="bouton">supprimer</button>
-
             </div>
           </div>
           <div class="card" style="width: 18rem; margin-top: 100px;height: 25rem;">
@@ -147,7 +146,7 @@
     </div>
 
         <!-- formulaire pour l'ajout -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -158,15 +157,15 @@
             <form>
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Titre</label>
-                <input type="text" class="form-control" id="titre-name" name="titre" [(ngModel)]="titre">
+                <input type="text" class="form-control" id="titre-name" name="titre">
               </div>
               <div class="mb-3">
                 <label for="image" class="col-form-label">Path_image</label>
-                 <input type="file" (change)="getFile($event)" accept="images_posts/*"  name="path_image" [(ngModel)]="path_image"/>
+                 <input type="file" (change)="getFile($event)" accept="images_posts/*" name="path_image">
               </div>
               <div class="mb-3">
                 <label for="number" class="col-form-label">Contenu</label>
-                <input type="text" class="form-control" id="number" name="duree" [(ngModel)]="contenu" >
+                <input type="text" class="form-control" id="number" name="duree">
               </div>
             </form>
           </div>
@@ -176,4 +175,4 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
