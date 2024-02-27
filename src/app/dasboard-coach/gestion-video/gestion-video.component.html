@@ -23,7 +23,7 @@
             <li>
               <a >
                 <span class="fas fa-stream"></span>
-              <span [routerLink]="['/post-admin']"> Post</span>
+              <span [routerLink]="['/gestion-post']"> Post</span>
               </a>
             </li>
             <li>
@@ -34,7 +34,7 @@
             </li>
           </ul>
           <li style="margin-top: 150px;">
-            <a [routerLink]="['/connexion']">
+            <a [routerLink]="['/Acceuil']">
               <span class="fa-solid fa-paperclip"></span>
               <span>Se déconnecter</span>
             </a>
@@ -58,9 +58,9 @@
         </div>
 
         <div class="user-wrapper">
-         <img src="https://bit.ly/3bvT89p" width="40px" height="40px" alt="profile-img">
+         <img src="https://img.freepik.com/photos-gratuite/portrait-of-smiling-afro-american-sports-man-with-arms-replied-looking-at-camera_171337-8263.jpg?t=st=1708952024~exp=1708955624~hmac=8ea0354a70e48b6ae63bdb49a794595a8c53f063e88b32a5c02afa9ea724c5d6&w=996" width="40px" height="40px" alt="profile-img">
          <div class="">
-            <h4>Moussa</h4>
+            <h4></h4>
             <small>Coach</small>
          </div>
         </div>
@@ -116,49 +116,39 @@
       <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" style="margin-top: 12%;">Ajouter</button>
     </div>
 
-      <div class="carte">
-        <div class="card"  *ngFor="let video of videos" style="width: 18rem; margin-top: 100px;height: 25rem;">
+      <div class="card-group">
+        <div class="card  mb-3"  *ngFor="let video of videos">
           <video controls>
             <source src="https://swagger.imaletbenji.com/{{video.path_video}}" type="video/mp4">
             Image non supporté
-        </video>
-            <div class="card-body">
-              <h4 class="card-title">{{video.titre}}</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <button class="btn">Modifier</button>
-             <button class="bouton">supprimer</button>
-
-            </div>
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">{{video.titre}}</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-body-secondary"></small></p>
           </div>
-          <!-- <div class="card" style="width: 18rem; margin-top: 100px;height: 25rem;">
-            <iframe width="260" height="180" src="https://www.youtube.com/embed/wfxm7Sufd4Y" title="Avoir des Abdos en 2semaines ! (6min programme à la maison)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <div class="card-body">
-              <h1 class="card-title">Body-Sculpt</h1>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <button class="btn">Modifier</button>
-             <button class="bouton">supprimer</button>
-
-            </div>
+        </div>
+        <!-- <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
           </div>
-          <div class="card" style="width: 18rem; margin-top: 100px;height: 25rem;">
-            <iframe width="260" height="180" src="https://www.youtube.com/embed/wfxm7Sufd4Y" title="Avoir des Abdos en 2semaines ! (6min programme à la maison)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <div class="card-body">
-              <h1 class="card-title">Gym</h1>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="boutons">
-                <button class="btn">Modifier</button>
-                <button class="bouton ">supprimer</button>
-
-              </div>
-
-            </div>
-          </div> -->
-
+        </div> -->
+        <!-- <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          </div>
+        </div> -->
       </div>
       </main>
     </div>
 
-    <!-- formulaire d'ajout pour gestion video -->
+    <!-- ²ulaire d'ajout pour gestion video -->
 
 
     
@@ -166,34 +156,46 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter-vidéo</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-header"  style="height:6vh">
+            <h4 class="modal-title fs-5" id="exampleModalLabel" style="margin-left: 2%;">Ajouter-vidéo</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin-right: 5%; margin-top: 5%;"></button>
           </div>
           <div class="modal-body">
-            <form>
-              <div class="mb-3">
+            <form >
+              <!-- <form action="" enctype="multipart/form-data"> -->
+              <div class="mb-3" style="width: 95%; margin: 0 auto;">
                 <label for="recipient-name" class="col-form-label">Titre</label>
-                <input type="text" class="form-control" id="titre-name" name="titre" [(ngModel)]="titre">
+                <input type="text" class="form-control" id="titre-name" name="titre" [(ngModel)]="titre" >
               </div>
               <div class="mb-3">
-                <label for="image" class="col-form-label">Path_video</label>
-                 <input type="file" (change)="onFileSelected($event)" accept="video/*"  name="path_video" [(ngModel)]="path_video"/>
+                <label for="image" class="col-form-label">Les videos</label>
+                 <input type="file" class="form-control" (change)="onFileSelected($event)" accept="video/*"  name="path_video" [(ngModel)]="path_video">
+                 <!-- <input type="file" (change)="getFile($event)" accept="images_posts/*"  name="path_image" [(ngModel)]="path_image"/> -->
+
               </div>
+              <label for="exampleDataList" class="form-label">Niveau</label>
+                  <select id="niveau" name="niveau" [(ngModel)]="niveau" >
+                    <option  value="niveau_debutant">Niveau debutant</option>
+                    <option  value="niveau_intermédiaire">Niveau Intermediaire</option>
+                    <option  value="niveau_avancé">Niveau Avancé</option>
+                  </select>            
+                
+             
               <div class="mb-3">
-                <label for="number" class="col-form-label">duree</label>
-                <input type="text" class="form-control" id="number" name="duree" [(ngModel)]="duree" >
-              </div>
-              <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Sous_catégorie</label>
-                <input type="text" class="form-control" id="sous_categorie_id- name" name="sous_categorie_id" [(ngModel)]="sous_categorie_id">
+                <label for="recipient-name" class="col-form-label">Sous-Catégorie</label>
+                <select id="sousCategorie" [(ngModel)]="sous_categorie" name="sous_categorie">
+                  <option  value="Vélo_elliptique">Vélo elliptique</option>
+                  <option  value="Entraînement avec poids libres">Entraînement avec poids libres</option>
+                  <option  value="Entraînement en circuit">Entraînement en circuit</option>
+                  <option  value="pilate">pilate</option>
+
+                </select>
               </div>
             </form>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn danger" data-bs-dismiss="modal">Annuler</button>
-            <button type="button" class="btn-btn" (click)="sendVideo()">Ajouter</button>
+          <div class="modal-footer mb-2  " style="height: 6vh;">
+            <button type="button" class="btn danger " data-bs-dismiss="modal">Annuler</button>
+            <button type="submit" class="btn " style="background-color: white; border: #ff9711; color: #ff9711; border: 1px solid #ff9711;" (click)="ajoutVideo()" >Ajouter</button>
           </div>
         </div>
       </div>
-    

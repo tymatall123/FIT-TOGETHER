@@ -11,58 +11,68 @@ export class ServiceService {
   }
 
 
-  constructor(private http:HttpClient) {
+  constructor(private http: HttpClient) {
   }
-  video(user:any){
+  video(user: any) {
     return this.http.post(`https://swagger.imaletbenji.com/api/video`, user)
   }
-   // methode pour recuperer tous les vidéos
-getvideos() : Observable<any>{
-return this.http.get< any>(`https://swagger.imaletbenji.com/api/videos`);
-}
+  // methode pour recuperer tous les vidéos
+  getvideos(): Observable<any> {
+    return this.http.get<any>(`https://swagger.imaletbenji.com/api/videos`);
+  }
 
-// methode pour ajouter donnée ves l'api
-addvideo(video : any) {
-return this.http.post<any>(`https://swagger.imaletbenji.com/api/video`, video);
-}
+  // methode pour ajouter donnée ves l'api
+  addvideo(data: any): Observable<any> {
+    const Token = localStorage.getItem('token');
+    console.log(Token);
+    if (Token) {
+      
+      const headers = new HttpHeaders({ 'Authorization': `Bearer ${Token}` });
+      console.log('bjh', data);
+      return this.http.post<any>('https://swagger.imaletbenji.com/api/video', {data}, { headers });
+    } else {
+      return of(null);
+    }
+  }
 
-addvid(data: any):Observable<any>{
-const Token = localStorage.getItem('access_token');
 
-return Token?
-this.http.post<any>( `https://swagger.imaletbenji.com/api/video`, data,{
-    headers: new HttpHeaders({ 'Authorization': `Bearer {Token} `})
-  }) : of(null);
-}
+  // addvid(formData:FormData): Observable<any> {
+  //   const Token =localStorage.getItem('token');
 
-getVideoById(id: string): Observable<any> {
-return this.http.get<any>(`{https://swagger.imaletbenji.com/api/video}/getVideoById/{id}`);
-}
+  //   return Token ?
+  //     this.http.post<any>(`https://swagger.imaletbenji.com/api/video`, { formData }, {
+  //       headers: new HttpHeaders({ 'Authorization': `Bearer ${Token}` })
+  //     }) : of(null);
+  // }
 
- // methode pour modifier donnée vers l'api
-editVideo(id : any, video:any){
-return this.http.put(`{}/video/edit/ {id}`, this.video)
-}
+  getVideoById(id: string): Observable<any> {
+    return this.http.get<any>(`{https://swagger.imaletbenji.com/api/video}/getVideoById/{id}`);
+  }
 
-// mis a jour d'une vidéo
-updateVideo(id: string, video: any ): Observable<any> {
-return this.http.put<any>('https://api.example.com/videos/' + id, video);
-}
+  // methode pour modifier donnée vers l'api
+  editVideo(id: any, video: any) {
+    return this.http.put(`{}/video/edit/ {id}`, this.video)
+  }
 
-// methode pour supprimer video
-deleteVideo(id: any) {
-return this.http.delete(`{https://swagger.imaletbenji.com/api/videos/}/video/delete/ {id}`)
-}
+  // mis a jour d'une vidéo
+  updateVideo(id: string, video: any): Observable<any> {
+    return this.http.put<any>('https://api.example.com/videos/' + id, video);
+  }
 
-ListPost(){
-  return this.http.get(`https://swagger.imaletbenji.com/api/posts`)
-}
-// méthode pour oploader une vidéo
-uploadVideo(file: File): Observable<any> {
-const formData = new FormData();
-formData.append('video', file, file.name);
+  // methode pour supprimer video
+  deleteVideo(id: any) {
+    return this.http.delete(`{https://swagger.imaletbenji.com/api/videos/}/video/delete/ {id}`)
+  }
 
-const url = `{}`;
-return this.http.post(url, formData);
-}
+  ListPost() {
+    return this.http.get(`https://swagger.imaletbenji.com/api/posts`)
+  }
+  // méthode pour oploader une vidéo
+  uploadVideo(file: File): Observable<any> {
+    const formData = new FormData();
+    formData.append('video', file, file.name);
+
+    const url = `{}`;
+    return this.http.post(url, formData);
+  }
 }

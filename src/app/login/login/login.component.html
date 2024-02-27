@@ -30,11 +30,14 @@
         <form >
           <div class="mb-3">
             <label for=""></label>
-            <input type="email" placeholder="Email"  name="email" [(ngModel)]="email"/>
+            <input type="email" placeholder="Email"  name="email" [(ngModel)]="email" (input)="  verifEmailConFonction()">
+            <p class="text-danger" *ngIf="!exactEmailCon">{{verifEmailCon}}</p>
+            <p class="text-success" *ngIf="exactEmailCon"><i class="bi bi-check2-all"></i> Exact !</p>
           </div>
           <div class="mb-3">
-            <input type="password" placeholder="Password" name="password" [(ngModel)]="password"/>
-
+            <input type="password" placeholder="Password" name="password" [(ngModel)]="password" (input)="  verifPasswordConFonction()">
+            <p class="text-danger" *ngIf="!exactPasswordCon">{{verifPasswordCon}}</p>
+            <p class="text-success" *ngIf="exactPasswordCon"><i class="bi bi-check2-all"></i> Exact !</p>
           </div>
           <a [routerLink]="['/inscription']">veuillez vous-inscrire!</a>
           <button (click)="connexion()" >Se connectez</button>
@@ -42,7 +45,7 @@
       </div>
       <div class="overlay-container">
      
-        <img src="https://s3-alpha-sig.figma.com/img/a035/2ee8/14c241dcad7ab9ffd82d7e66429ebde2?Expires=1707696000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RkfiILE6CoorTraCGVxFXu4MBbQnva4bdgrKMbu3VUtxmshv7wDfrP7IWlJL71V3wd7huctEj3wUGnpM-UkgNGPhXtgSdsIjjLGtILxJQ0mgR6rtqOuIl3rqX2vg1xhuvQz3YRRnVNEL8Th4wR3VAOKbZdMWgdPqtj9il5EtwzdzWGM4qaq-k5WUvIFXiCK5u0xp-uJ5N7ZwDAdBDCVOs8BCGUOvFp4VpIJs3mF0DxI9iimBHMZRrQNInNzD8yFr6A0ylwoeeT8wy0Ca0tcBouR9o~kvyjlgm1O79N9sMvh~VsTwgQNzpNDoTjEhaDfg7U2xhCUGJSOhHS4tlvq7dQ__" id="image">
+        <img src="https://img.freepik.com/photos-premium/preparer-ses-muscles-pour-course-jolie-jeune-femme-etirant-ses-jambes-avant-aller-faire-du-jogging_590464-35171.jpg?w=740" id="image">
       </div>
     </div>
   </main>

@@ -12,7 +12,6 @@ import { AboutUsComponent } from './interface-User/about-us/about-us.component';
 import { PostComponent } from './interface-User/post/post.component';
 import { AcceuilAdminComponent } from './dasboard-coach/acceuil-admin/acceuil-admin.component';
 import { GestionVideoComponent } from './dasboard-coach/gestion-video/gestion-video.component';
-import { GestionPostComponent } from './dasboard-coach/gestion-post/gestion-post.component';
 import { AdminAcceuilComponent } from './dashboard-Admin/admin-acceuil/admin-acceuil.component';
 import { GestionCoachComponent } from './dashboard-Admin/gestion-coach/gestion-coach.component';
 import { GestionCategorieComponent } from './dashboard-Admin/gestion-categorie/gestion-categorie.component';
@@ -21,6 +20,7 @@ import { LoginComponent } from './login/login/login.component';
 import { InscriptionComponent } from './inscription/inscription/inscription.component';
 import { DetailVideoComponent } from './interface-User/detail-video/detail-video.component';
 import { FormsModule } from '@angular/forms';
+import { PostAdminComponent } from './dasboard-coach/post-admin/post-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +31,6 @@ import { FormsModule } from '@angular/forms';
     PostComponent,
     AcceuilAdminComponent,
     GestionVideoComponent,
-    GestionPostComponent,
     AdminAcceuilComponent,
     GestionCoachComponent,
     GestionCategorieComponent,
@@ -39,6 +38,7 @@ import { FormsModule } from '@angular/forms';
     InscriptionComponent,
     DetailVideoComponent,
     LoginComponent,
+    PostAdminComponent,
     
    
     

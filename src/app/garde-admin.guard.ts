@@ -14,7 +14,7 @@ export const gardeAdminGuard: CanActivateFn = (route, state) => {
     }
   
     )
-    router.navigate(['/auth']);
+    router.navigate(['/connexion']);
     return false;
   
   }else{
