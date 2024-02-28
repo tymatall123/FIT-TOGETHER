@@ -51,7 +51,7 @@ export class PostService {
   
   // mis a jour d'une categorie
   updatePost(id: string, post: any ): Observable<any> {
-  return this.http.put<any>('https://api.example.com/post/' + id, post);
+  return this.http.put<any>('https://swagger.imaletbenji.com/api/post/' + id, post);
   }
   
 }

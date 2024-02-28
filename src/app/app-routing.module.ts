@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AcceuilComponent } from './interface-User/acceuil/acceuil.component';
-import { ContactComponent } from './interface-User/contact/contact.component';
 import { ServiceComponent } from './interface-User/service/service.component';
 import { AboutUsComponent } from './interface-User/about-us/about-us.component';
 import { PostComponent } from './interface-User/post/post.component';
@@ -24,7 +23,6 @@ const routes: Routes = [
   // routes pour utilisateur
   {path: 'connexion',component:LoginComponent},
   { path: 'Acceuil', component:AcceuilComponent },
-  { path: 'contact', component:ContactComponent },
   { path: 'service', component:ServiceComponent },
   { path: 'about-us', component:AboutUsComponent },
   { path: 'post', component:PostComponent},

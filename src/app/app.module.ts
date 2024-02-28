@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AcceuilComponent } from './interface-User/acceuil/acceuil.component';
 import { ServiceComponent } from './interface-User/service/service.component';
-import { ContactComponent } from './interface-User/contact/contact.component';
 import { AboutUsComponent } from './interface-User/about-us/about-us.component';
 import { PostComponent } from './interface-User/post/post.component';
 import { AcceuilAdminComponent } from './dasboard-coach/acceuil-admin/acceuil-admin.component';
@@ -27,7 +26,6 @@ import { MaintenanceComponent } from './maintenance/maintenance.component';
     AppComponent,
     AcceuilComponent,
     ServiceComponent,
-    ContactComponent,
     AboutUsComponent,
     PostComponent,
     AcceuilAdminComponent,
