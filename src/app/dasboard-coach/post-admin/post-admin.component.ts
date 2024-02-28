@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PostService } from 'src/app/services/post.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-post-admin',
@@ -19,10 +20,13 @@ export class PostAdminComponent  implements OnInit{
     private PostService:PostService,
 
   ) { }
-
+  
   ngOnInit(): void {
     this. listePost()
+    
   }
+
+  
 
 
 
@@ -52,6 +56,11 @@ ajoutPost(){
         console.error("Erreur lors de l'ajout:", error);
       }
     );
+    if (this. path_image == '' || this.titre == '' || this.contenu=='') {
+      this.showmessage("error", "Oops", "Veuillez renseigner tous les champs");
+    }else{
+      this.showmessage
+    }
 }
 
 // modification pour les posts
@@ -90,11 +99,32 @@ this.PostService.editpost(this.postChoisi.id, PostToUpdate).subscribe(
 );
 }
 
+// Méthode pour la suppression
+supprimerPost(id:string): void {
+  const confirmation = confirm("Êtes-vous sûr de vouloir supprimer cette catégorie ?");
+  if (confirmation) {
+    this.PostService.deletePost(id).subscribe(
+      (data: any) => {
+        console.log("Suppression réussie", data);
+        this.listePost();
+        // Actualiser les données
+      },
+      (error) => {
+        console.error("Erreur lors de la suppression:", error);
+      }
+    );
+  }
+}
 
 
 
-
-
+showmessage(icon:any, titre:any, text: any) {
+  Swal.fire({
+    icon:icon,
+    title:titre,
+    text:text
+  })
+  }
 
 
 

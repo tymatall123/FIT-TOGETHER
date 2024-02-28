@@ -20,6 +20,7 @@ export class PostService {
   
 
   }
+  
   addPost(data: any): Observable<any> {
     const Token = localStorage.getItem('token');
   
@@ -49,9 +50,20 @@ export class PostService {
   
   }
   
-  // mis a jour d'une categorie
-  updatePost(id: string, post: any ): Observable<any> {
-  return this.http.put<any>('https://swagger.imaletbenji.com/api/post/' + id, post);
-  }
+
+  // supprimer post
+  deletePost(id: string): Observable<any> {
+    const Token = localStorage.getItem('token');
   
+    console.log(Token);
+  
+  
+    if (Token) {
+      const headers = new HttpHeaders({ 'Authorization': `Bearer ${Token}` });
+      return this.http.delete<any>('https://swagger.imaletbenji.com/api/post/' + id, { headers });
+  
+    } else {
+      return of(null);
+    }
+  }
 }
