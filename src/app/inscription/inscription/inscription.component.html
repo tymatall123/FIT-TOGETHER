@@ -14,10 +14,14 @@
         </div>
         <div class="form-container sign-in-container">
             <form action="#">
-                <input type="text" name="prenom" placeholder="Prenom" [(ngModel)]="prenom"/>
-                <input type="text" name="nom" placeholder="Nom"[(ngModel)]="nom" />
-                <input type="email" name="email" placeholder="email" [(ngModel)]="email"/>
-                <input type="password" name="password" placeholder="Password" [(ngModel)]="password"/>
+                <label for=""><span class="span_validate" id="validationPrenom"></span></label>
+                <input type="text" name="prenom" placeholder="Prenom" [(ngModel)]="prenom" (input)="  prenomValidate()">
+                <label for=""><span class="span_validate" id="validationNom"></span></label>
+                <input type="text" name="nom" placeholder="Nom"[(ngModel)]="nom" (input)="nomValidate()">
+                <label for=""><span class="span_validate" id="validationEmail"></span></label>
+                <input type="email" name="email" placeholder="email" [(ngModel)]="email" (input)="emailValidate() ">
+                <label for=""><span class="span_validate" id="validationPassword"></span></label>
+                <input type="password" name="password" placeholder="Password" [(ngModel)]="password" (input)=" passeValidate()">
                 <button (click)="inscription()" routerLinkActive="router-link-active" >S'inscrire</button>
             </form>
         </div>
