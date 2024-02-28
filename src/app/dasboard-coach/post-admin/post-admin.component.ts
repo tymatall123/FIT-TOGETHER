@@ -45,7 +45,8 @@ ajoutPost(){
     this.PostService.addPost(formdata).subscribe(
       (reponse: any) => {
         console.log("Ajout réussi", reponse);
-        // window.location.reload();
+        this. listePost()
+
       },
       (error) => {
         console.error("Erreur lors de l'ajout:", error);

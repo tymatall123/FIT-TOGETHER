@@ -16,6 +16,7 @@ import { InscriptionComponent } from './inscription/inscription/inscription.comp
 import { DetailVideoComponent } from './interface-User/detail-video/detail-video.component';
 import { PostAdminComponent } from './dasboard-coach/post-admin/post-admin.component';
 import { gardeAdminGuard } from './garde-admin.guard';
+import { MaintenanceComponent } from './maintenance/maintenance.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,8 @@ const routes: Routes = [
   { path: 'post', component:PostComponent},
   { path: 'inscription', component:InscriptionComponent},
    {path: 'detail' , component:DetailVideoComponent},
+   {path: 'maintenance' , component:MaintenanceComponent},
+
    {path: 'gestion-post' , component:PostAdminComponent, canActivate:[gardeAdminGuard]},
 
 

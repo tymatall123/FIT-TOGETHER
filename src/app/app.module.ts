@@ -21,6 +21,7 @@ import { InscriptionComponent } from './inscription/inscription/inscription.comp
 import { DetailVideoComponent } from './interface-User/detail-video/detail-video.component';
 import { FormsModule } from '@angular/forms';
 import { PostAdminComponent } from './dasboard-coach/post-admin/post-admin.component';
+import { MaintenanceComponent } from './maintenance/maintenance.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,7 @@ import { PostAdminComponent } from './dasboard-coach/post-admin/post-admin.compo
     DetailVideoComponent,
     LoginComponent,
     PostAdminComponent,
+    MaintenanceComponent,
     
    
     

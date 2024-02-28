@@ -17,6 +17,7 @@ export class LoginComponent {
   emailCon: string='';
   nom: string ='';
   prenom: string='';
+  truthyTab: any;
 
 
 
@@ -34,7 +35,9 @@ export class LoginComponent {
     const datainput = {
       email: this.email,
       password :this.password,
-      
+    }
+    if (this.email == '' || this.password == '') {
+      this.showMessage("error", "Oops", "Veuillez renseigner tous les champs");
     }
     console.log("data", this.email)
    this.authservice.login(datainput).subscribe((response : any)=>{
@@ -92,66 +95,64 @@ export class LoginComponent {
   exactEmailCon: boolean = false;
   exactPasswordCon: boolean = false;
 
- // Fonction de Verification du password pour la fonctionnalitÃ© connexion
-  verifPasswordConFonction() {
-    this.exactPasswordCon = false;
-    if (this.password == '') {
-      this.verifPasswordCon = '';
-      // this.verifPasswordCon = 'Veuillez renseigner votre mot de passe';
-    } if (this.passwordCon.length < 5) {
-      this.verifPasswordCon = 'Mot de passe doit etre superieur a 5 caracteres';
-    } else {
-      this.verifPasswordCon = '';
-      this.exactPasswordCon = true;
-    }
-  }
   // Fonction de Verification de l'email pour la fonctionnalitÃ© connexion
-  verifEmailConFonction() {
-    const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,}$/;
-    this.exactEmailCon = false;
-
-    if (this.email == '') {
-      // this.verifEmailCon = 'Veuillez renseigner votre email';
-      this.verifEmailCon = '';
-    }if (
-      !this.email.match(emailPattern) ||
-      !this.email.endsWith('@') ||
-      !this.email.includes('.')
-    ) {
-      this.verifEmailCon = 'Veuillez donner un email valide';
+  emailValidate() {
+    console.warn(this.email);
+    let validationEmail = document.getElementById('validationEmail');
+    const emailRegexGegin = /^[a-zA-Z]+[.a-z0-9]+@[a-z]+[.]{1}[a-z]{2,}$/;
+    // const emailRegexEnd = /^[a-z]{2,}$/;
+    // this.emailError = emailRegexGegin.test(this.email);
+    if (emailRegexGegin.test(this.email)) {
+      // console.log(emailRegexGegin.test(this.email));
+      validationEmail!.innerHTML = 'valide';
+      validationEmail!.classList.remove('error');
+      validationEmail!.classList.add('success');
+      if (this.truthyTab.find((value: any) => value.email_utilisateur == true) == undefined) {
+        this.truthyTab.push({ email_utilisateur: true });
+      }
+      console.log(this.truthyTab);
     } else {
-      this.verifEmailCon = '';
-      this.exactEmailCon = true;
-    }
-  }
+      // console.log(emailRegexGegin.test(this.email));
+      validationEmail!.innerHTML = 'invalide';
+      validationEmail!.classList.remove('success');
+      validationEmail!.classList.add('error');
+      if (this.truthyTab.find((value: any) => value.email_utilisateur == true) != undefined) {
+        this.truthyTab.splice(this.truthyTab.findIndex((value: any) => value.email_utilisateur == true), 1);
+      }
 
-  // Verification de  l'email
-  verifEmailFonction() {
-    const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,}$/;
-    this.exactEmail = false;
-
-    if (this.email == '') {
-      this.verifEmail = '';
-      // this.verifEmail = 'Veuillez renseigner votre email';
-    }if (!this.email.match(emailPattern)) {
-      this.verifEmail = 'Veuillez donner un email valide';
-    } else {
-      this.verifEmail = '';
-      this.exactEmail = true;
     }
+    if (this.email == "") {
+      validationEmail!.innerHTML = "";
+    }
+    // console.log(this.truthyTab);
   }
   // Verification du mot de passe
-  verifPasswordFonction() {
-    this.exactPassword = false;
-    if (this.password == '') {
-      this.verifPassword = '';
-      // this.verifPassword = 'Veuillez renseigner votre mot de passe';
-    }if (this.password.length < 5) {
-      this.verifPassword = 'Mot de passe doit Ãªtre supÃ©rieur ou Ã©gal Ã  5';
+  passeValidate() {
+    let validationPrenom = document.getElementById('validationPassword');
+    const nomPrenomRegex = /^.{5,}$/;
+    if (nomPrenomRegex.test(this.password)) {
+      // console.log(nomPrenomRegex.test(this.pass));
+      validationPrenom!.innerHTML = 'valide';
+      validationPrenom!.classList.remove('error');
+      validationPrenom!.classList.add('success');
+      if (this.truthyTab.find((value:any)=>value.password==true)==undefined) {
+        this.truthyTab.push({password:true});
+      }
+
     } else {
-      this.verifPassword = '';
-      this.exactPassword = true;
+      // console.log(nomPrenomRegex.test(this.pass));
+      validationPrenom!.innerHTML = 'invalide';
+      validationPrenom!.classList.remove('success');
+      validationPrenom!.classList.add('error');
+      if (this.truthyTab.find((value:any)=>value.password==true)!=undefined) {
+        this.truthyTab.splice(this.truthyTab.findIndex((value:any)=>value.password==true),1);
+      }
     }
+    if (this.password=="") {
+      validationPrenom!.innerHTML="";
+    }
+    // console.log(this.truthyTab);
+    // console.log(this.truthyTab.length);
   }
     }
 

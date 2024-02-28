@@ -29,15 +29,12 @@
       <div class="form-container sign-in-container">
         <form >
           <div class="mb-3">
-            <label for=""></label>
-            <input type="email" placeholder="Email"  name="email" [(ngModel)]="email" (input)="  verifEmailConFonction()">
-            <p class="text-danger" *ngIf="!exactEmailCon">{{verifEmailCon}}</p>
-            <p class="text-success" *ngIf="exactEmailCon"><i class="bi bi-check2-all"></i> Exact !</p>
+            <label for=""><span class="span_validate" id="validationEmail"></span></label>
+            <input type="email" placeholder="Email"  name="email" [(ngModel)]="email" (input)=" emailValidate()">
           </div>
           <div class="mb-3">
-            <input type="password" placeholder="Password" name="password" [(ngModel)]="password" (input)="  verifPasswordConFonction()">
-            <p class="text-danger" *ngIf="!exactPasswordCon">{{verifPasswordCon}}</p>
-            <p class="text-success" *ngIf="exactPasswordCon"><i class="bi bi-check2-all"></i> Exact !</p>
+            <label for=""><span class="span_validate" id="validationPassword"></span></label>
+            <input type="password" placeholder="Password" name="password" [(ngModel)]="password" (input)=" passeValidate()">
           </div>
           <a [routerLink]="['/inscription']">veuillez vous-inscrire!</a>
           <button (click)="connexion()" >Se connectez</button>

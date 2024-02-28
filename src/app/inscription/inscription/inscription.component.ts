@@ -50,6 +50,8 @@ export class InscriptionComponent {
           this.showMessage('success', 'Felicitation', 'utilisateur inscris avec succés')
         }
       )
+      this.router.navigate(['/connexion'])
+
     }
   }
   user(user: any) {

@@ -111,7 +111,7 @@
     <!-- bouton ajout -->
     <button class="btn" style="margin-top: 50px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter</button>
 
-    <div class="carte">
+  <div class="carte">
     <!-- <div class="card" *ngFor="let item of post" style="width: 18rem; margin-top: 100px;height: 25rem;">
         <img src="https://swagger.imaletbenji.com/api/{{post.path_image}}" class="card-img-top" alt="...">
         <div class="card-body">
@@ -121,29 +121,30 @@
          <button class="bouton">supprimer</button>
         </div>
       </div> -->
-      <div class="card"  *ngFor="let post of posts"  style="width: 18rem; margin-top: 100px;height: 25rem;">
+
+  <div class="card-group">
+    <div class="row">
+      <div class="card col-md-4"  *ngFor="let post of posts"  style="width: 15rem; margin-top: 100px;height: 25rem; ">
         <img src="https://swagger.imaletbenji.com{{post.image}}" class="card-img-top" alt="...">
-        <div class="card-body">
         <div class="card-body">
           <h5 class="card-title">{{post.titre}}</h5>
           <p class="card-text">{{post.contenu}}</p>
-        <div class="bton d-flex justify-content-between mt-4">
-          <button class="btn"data-bs-toggle="modal" data-bs-target="#exampleModal1" (click)="chargerInfo(post)" >Modifier</button>
-          <button class="bouton ">supprimer</button>
-        </div>
-
+          <p class="card-text"><small class="text-body-secondary"></small></p>
+          <div class="bton d-flex justify-content-between mt-5">
+            <button class="btn"data-bs-toggle="modal" data-bs-target="#exampleModal1" (click)="chargerInfo(post)" >Modifier</button>
+            <button class="bouton ">supprimer</button>
+          </div>
         </div>
       </div>
-     </div>
- 
-</div>
+    </div>
+  </div>
 
     <!-- formulaire pour l'ajout -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter-Post</h1>
+        <h5 class="modal-title fs-5" id="exampleModalLabel">Ajouter-Post</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
