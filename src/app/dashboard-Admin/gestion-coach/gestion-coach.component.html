@@ -120,32 +120,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">tall</th>
-            <td>fatima</td>
-            <td>fatimagmail.com</td>
-            <td> <button class="mx-3">spprimer</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">diallo</th>
-            <td>benji</td>
-            <td>bengmail.com</td>
-            <td> <button class="mx-3">spprimer</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">diallo</th>
-            <td>benji</td>
-            <td>bengmail.com</td>
-            <td> <button class="mx-3">spprimer</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">diallo</th>
-            <td>benji</td>
-            <td>bengmail.com</td>
-            <td> <button class="mx-3">spprimer</button>
+          <tr *ngFor="let user of coachs">
+            <th scope="row">{{user.nom}}</th>
+            <td>{{user.prenom}}</td>
+            <td>{{user.email}}</td>
+            <td> <button class="mx-3" (click)="supprimercoatch(user.id)">spprimer</button>
             </td>
           </tr>
         </tbody>

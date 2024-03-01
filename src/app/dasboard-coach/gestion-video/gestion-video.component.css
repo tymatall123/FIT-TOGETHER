@@ -1,3 +1,6 @@
+/* *{
+  border: solid red;
+} */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 @import "~@fortawesome/fontawesome-free/css/all.css";
 
@@ -440,7 +443,6 @@ body {
   .btn{
     width: 85px;
     height: 30px;
-    margin-top: 25px;
     background-color: #ff9711;
     border: none;
     border-radius: 50px;
@@ -449,7 +451,6 @@ body {
   .bouton{
     width: 80px;
     height: 30px;
-    margin-left: 80px;
     border-radius: 50px;
     border: solid 2px #ff9711 ;
     background-color: white;
@@ -463,3 +464,5 @@ body {
   .card-text{
     margin-top: 15px;
   }
+  /* les cartes */
+  

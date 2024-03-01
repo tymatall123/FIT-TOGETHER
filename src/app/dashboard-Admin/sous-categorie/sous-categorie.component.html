@@ -122,7 +122,7 @@
           <tr *ngFor="let souscategorie of souscategories">
             <th scope="row">1</th>
             <td>{{ souscategorie.sous_categorie }}</td>
-            <td>{{ souscategorie.categorie_id.categorie }}</td>
+            <td>{{ souscategorie.categorie_id.categorie}}</td>
             <td>
               <button class="modif" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-modif" data-bs-whatever="@mdo" (click)=" chargeInfo(souscategorie)">Modifier</button>             
               <button class="mx-3" (click)="supprimersousCategorie(souscategorie.id)">Supprimer</button>
@@ -151,7 +151,7 @@
             <div class="mb-3 ">
               <label for="recipient-name" class="col-form-label">catégorie</label>
               <select [(ngModel)]="cat_id" name="categorie">
-                <option   *ngFor="let cat of souscategories"  [value]="cat.categorie_id.id">{{cat.categorie_id.categorie}}</option>
+                <option   *ngFor="let cat of categories"  [value]="cat.id">{{cat.categorie}}</option>
               </select>
             </div>
           </form>

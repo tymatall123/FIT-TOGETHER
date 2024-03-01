@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CategorieService } from 'src/app/services/categorie.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-gestion-categorie',
@@ -10,6 +11,7 @@ import { CategorieService } from 'src/app/services/categorie.service';
 export class GestionCategorieComponent implements OnInit {
   
   categories: any[] = [];
+  nom: string ='';
 
 ;
   constructor(private router: Router, private CategorieService: CategorieService) { }
@@ -45,6 +47,11 @@ this.CategorieService.addcategorie(data).subscribe(
     console.error("Erreur lors de l'ajout:", error);
   }
 );
+if (this.titre == '' ) {
+  this.showmessage("error", "Oops", "Veuillez renseigner tous les champs");
+}else { 
+  this.showmessage('success',"reussi", "ajout ajouter avec succés" );
+}
   }
   showMessage(arg0: string, arg1: string, arg2: string) {
     throw new Error('Method not implemented.');
@@ -72,8 +79,9 @@ modifierCategorie(): void {
       console.error("Erreur lors de la modification:", error);
     }
   );
-}
+  this.showmessage('success',"reussi", "modifier avec succés" );
 
+}
 
 //méthode pour la suppression
 supprimerCategorie(CategorieId: string): void {
@@ -90,7 +98,15 @@ supprimerCategorie(CategorieId: string): void {
       }
     );
   }
+
 }
+showmessage(icon:any, titre:any, text: any) {
+  Swal.fire({
+    icon:icon,
+    title:titre,
+    text:text
+  })
+  }
 
 }
 

@@ -92,145 +92,25 @@
 			</div>
 		</div>
 	</div>
-
       <section>
-        <h1>Post</h1>
+        <h1>Listes des posts</h1>
         <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-          <div class="blog-card blog-card-blog">
-            <div class="blog-card-image">
-                <a href="#"> <img class="img" src="https://img.freepik.com/free-photo/vibrant-collection-healthy-fruit-vegetables-generated-by-ai_24640-80425.jpg?size=626&ext=jpg&ga=GA1.2.999429239.1696939061&semt=sph"> </a>
-                <div class="ripple-cont"></div>
-            </div>
-            <div class="blog-table">
-                <h6 class="blog-category blog-text-success"><i class="far fa-newspaper"></i> </h6>
-                <h4 class="blog-card-caption">
-                    <a href="#">Lorem Ipsum is simply dummy text of the printing and</a>
-                </h4>
-                <p class="blog-card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <div class="ftr">
-                    <div class="author">
-                        <a href="#"> <img src="https://img.freepik.com/free-photo/young-happy-sportswoman-getting-ready-workout-tying-shoelace-fitness-center_637285-470.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" alt="..." class="avatar img-raised"> <span>Lobe</span> </a>
-                    </div>
-                    <div class="stats"> <i class="far fa-clock"></i> 10 min </div>
-                </div>
-            </div>
-        </div>
-        </div>
-            
-            
-            <div class="col-md-4">
-          <div class="blog-card blog-card-blog">
-            <div class="blog-card-image">
-                <a href="#"> <img class="img" src="https://img.freepik.com/premium-photo/fresh-milk-different-glass-bottles_74095-572.jpg?size=626&ext=jpg&ga=GA1.2.999429239.1696939061&semt=ais"> </a>
-                <div class="ripple-cont"></div>
-            </div>
-            <div class="blog-table">
-                <h6 class="blog-category blog-text-success"><i class="fas fa-blog"></i> </h6>
-                <h4 class="blog-card-caption">
-                    <a href="#">Lorem Ipsum is simply dummy text of the printing and</a>
-                </h4>
-                <p class="blog-card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <div class="ftr">
-                    <div class="author">
-                        <a href="#"> <img src="https://img.freepik.com/free-photo/young-happy-sportswoman-getting-ready-workout-tying-shoelace-fitness-center_637285-470.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" alt="..." class="avatar img-raised"> <span>lobe</span> </a>
-                    </div>
-                    <div class="stats"> <i class="far fa-clock"></i> 10 min </div>
-                </div>
-            </div>
-        </div>
-        </div>
-            
-            <div class="col-md-4">
-          <div class="blog-card blog-card-blog">
-            <div class="blog-card-image">
-                <a href="#"> <img class="img" src="https://img.freepik.com/free-photo/green-apple-with-leaves_1101-453.jpg?size=626&ext=jpg&ga=GA1.2.999429239.1696939061&semt=sph"> </a>
-                <div class="ripple-cont"></div>
-            </div>
-            <div class="blog-table">
-                <h6 class="blog-category blog-text-success"><i class="far fa-newspaper"></i> </h6>
-                <h4 class="blog-card-caption">
-                    <a href="#">Lorem Ipsum is simply dummy text of the printing and</a>
-                </h4>
-                <p class="blog-card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <div class="ftr">
-                    <div class="author">
-                        <a href="#"> <img src="https://img.freepik.com/free-photo/young-happy-sportswoman-getting-ready-workout-tying-shoelace-fitness-center_637285-470.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" alt="..." class="avatar img-raised"> <span>lobe</span> </a>
-                    </div>
-                    <div class="stats"> <i class="far fa-clock"></i> 10 min </div>
-                </div>
-            </div>
-        </div>
-        </div>
-          </div>
-        </div>
-        
-      </section>
-      <section>
-        <h1>Proteines</h1>
-        <div class="container">
-          <div class="row">
+          <div class="row" >
             <div class="col-md-4" *ngFor="let post of posts">
-          <div class="blog-card blog-card-blog">
+          <div class="blog-card blog-card-blog" style="max-height: 100%;">
             <div class="blog-card-image">
-                <a href="#"> <img class="img" [src]="post.image"> </a>
+                 <img class="img" src="https://swagger.imaletbenji.com/{{post.image}}" style="width: 100%;height: 15rem;">
                 <div class="ripple-cont"></div>
             </div>
             <div class="blog-table">
                 <h6 class="blog-category blog-text-success"><i class="far fa-newspaper"></i> </h6>
                 <h4 class="blog-card-caption">
-                    <a href="#">Lorem Ipsum is simply dummy text of the printing and</a>
+                    <a >{{post.titre}}</a>
                 </h4>
-                <p class="blog-card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p class="blog-card-description">{{post.contenu}}</p>
                 <div class="ftr">
                     <div class="author">
-                        <a href="#"> <img src="https://img.freepik.com/free-photo/young-happy-sportswoman-getting-ready-workout-tying-shoelace-fitness-center_637285-470.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" alt="..." class="avatar img-raised"> <span>Lobe</span> </a>
-                    </div>
-                    <div class="stats"> <i class="far fa-clock"></i> 10 min </div>
-                </div>
-            </div>
-        </div>
-        </div>
-            
-            
-            <div class="col-md-4">
-          <div class="blog-card blog-card-blog">
-            <div class="blog-card-image">
-                <a href="#"> <img class="img" src="https://img.freepik.com/free-photo/ketogenic-low-carbs-diet-food-selection-white-wall_155003-27728.jpg?size=626&ext=jpg&ga=GA1.2.999429239.1696939061&semt=sph"> </a>
-                <div class="ripple-cont"></div>
-            </div>
-            <div class="blog-table">
-                <h6 class="blog-category blog-text-success"><i class="fas fa-blog"></i> </h6>
-                <h4 class="blog-card-caption">
-                    <a href="#">Lorem Ipsum is simply dummy text of the printing and</a>
-                </h4>
-                <p class="blog-card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <div class="ftr">
-                    <div class="author">
-                        <a href="#"> <img src="https://img.freepik.com/free-photo/young-happy-sportswoman-getting-ready-workout-tying-shoelace-fitness-center_637285-470.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" alt="..." class="avatar img-raised"> <span>lobe</span> </a>
-                    </div>
-                    <div class="stats"> <i class="far fa-clock"></i> 10 min </div>
-                </div>
-            </div>
-        </div>
-        </div>
-            
-            <div class="col-md-4">
-          <div class="blog-card blog-card-blog">
-            <div class="blog-card-image">
-                <a href="#"> <img class="img" src="https://img.freepik.com/free-photo/healthy-salad-with-salmon-tomatoes-mushrooms-lettuce-lentil-dark_2829-11067.jpg?size=626&ext=jpg&ga=GA1.2.999429239.1696939061&semt=sph"> </a>
-                <div class="ripple-cont"></div>
-            </div>
-            <div class="blog-table">
-                <h6 class="blog-category blog-text-success"><i class="far fa-newspaper"></i> </h6>
-                <h4 class="blog-card-caption">
-                    <a href="#">Lorem Ipsum is simply dummy text of the printing and</a>
-                </h4>
-                <p class="blog-card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <div class="ftr">
-                    <div class="author">
-                        <a href="#"> <img src="https://img.freepik.com/free-photo/young-happy-sportswoman-getting-ready-workout-tying-shoelace-fitness-center_637285-470.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" alt="..." class="avatar img-raised"> <span>lobe</span> </a>
+                        <a > <img src="https://img.freepik.com/free-photo/young-happy-sportswoman-getting-ready-workout-tying-shoelace-fitness-center_637285-470.jpg?size=626&ext=jpg&ga=GA1.1.999429239.1696939061&semt=sph" alt="..." class="avatar img-raised"> <span>coach</span> </a>
                     </div>
                     <div class="stats"> <i class="far fa-clock"></i> 10 min </div>
                 </div>

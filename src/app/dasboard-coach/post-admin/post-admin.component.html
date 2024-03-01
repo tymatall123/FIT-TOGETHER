@@ -16,7 +16,7 @@
           </a>
         </li>
         <li>
-            <a  routerLink="['/video]">
+            <a routerLink="['/video]">
               <span class="fa-solid fa-video"></span>
               <span>Video</span>
             </a>
@@ -37,7 +37,7 @@
       <li style="margin-top: 150px;">
         <a >
           <span class="fa-solid fa-paperclip"></span>
-          <span>Se déconnecter</span>
+          <span [routerLink]="['/connexion']">Se déconnecter</span>
         </a>
       </li>
     </div>
@@ -130,11 +130,11 @@
           <h5 class="card-title">{{post.titre}}</h5>
           <p class="card-text">{{post.contenu}}</p>
           <p class="card-text"><small class="text-body-secondary"></small></p>
-          <div class="bton d-flex justify-content-between mt-5">
+        
+        </div>  <div class="bton d-flex justify-content-between mt-5">
             <button class="btn"data-bs-toggle="modal" data-bs-target="#exampleModal1" (click)="chargerInfo(post)" >Modifier</button>
             <button class="bouton" (click)="supprimerPost(post.id)">supprimer</button>
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -154,7 +154,7 @@
             <input type="text" class="form-control" id="titre-name" name="titre" [(ngModel)]="titre">
           </div>
           <div class="mb-3">
-            <label for="image" class="col-form-label" class="col-form-label">Path_image</label>
+            <label for="image" class="col-form-label" class="col-form-label">Image</label>
              <input type="file" (change)="getFile($event)" accept="images_posts/*" name="path_image" [(ngModel)]="path_image">
           </div>
           <div class="mb-3">

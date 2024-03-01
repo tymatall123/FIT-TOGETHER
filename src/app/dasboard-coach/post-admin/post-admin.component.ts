@@ -56,10 +56,10 @@ ajoutPost(){
         console.error("Erreur lors de l'ajout:", error);
       }
     );
-    if (this. path_image == '' || this.titre == '' || this.contenu=='') {
+    if (this.titre == ''|| this.path_image == ''|| this.contenu == '' ) {
       this.showmessage("error", "Oops", "Veuillez renseigner tous les champs");
-    }else{
-      this.showmessage
+    }else { 
+      this.showmessage('success',"reussi", "ajout ajouter avec succés" );
     }
 }
 
@@ -97,6 +97,8 @@ this.PostService.editpost(this.postChoisi.id, PostToUpdate).subscribe(
     console.error("Erreur lors de la modification:", error);
   }
 );
+this.showmessage('success',"reussi", "modifier avec succés" );
+
 }
 
 // Méthode pour la suppression

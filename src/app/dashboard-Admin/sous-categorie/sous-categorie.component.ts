@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CategorieService } from 'src/app/services/categorie.service';
 import { SousCategorieService } from 'src/app/services/sous-categorie.service';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-sous-categorie',
   templateUrl: './sous-categorie.component.html',
@@ -11,24 +13,38 @@ export class SousCategorieComponent {
 souscategories: any[] = [];
 cat_id:any;
 souscategorie:any;
+  categories: any;
 
 
 
-constructor(private router: Router, private SousCategorieService: SousCategorieService) { }
+constructor(private router: Router, 
+  private SousCategorieService: SousCategorieService,
+  private CategorieService:CategorieService
+  )
+  
+   { }
 
 ngOnInit(): void {
   this.listesouscategorie();
+  this.listecategorie();
 }
-
+ 
 listesouscategorie() {
   this.SousCategorieService.getsouscategorie().subscribe((reponse) => {
-    this.souscategories = reponse.data;
+    this.souscategories = reponse.sousCategories;
     console.log(this.souscategories, 'sous_categorie');
   });
 }
   // méthode pour ajouter sous-catégorie
-  
+  listecategorie() {
+    this.CategorieService.getcategorie().subscribe((reponse) => {
+      this.categories = reponse.Categories
+      console.log(this.categories, 'categorie')
 
+      // console.log(typeof(reponse),'fdfzffz');
+      
+    })
+  }
   ajoutsouscategorie(){
    const data = {
     "sous_categorie": this.souscategorie,
@@ -47,6 +63,12 @@ this.SousCategorieService.addsouscategorie(data).subscribe(
     console.error("Erreur lors de l'ajout:", error);
   }
 );
+if (this.souscategorie == ''|| this.cat_id =='' ) {
+  this.showmessage("error", "Oops", "Veuillez renseigner tous les champs");
+}else 
+{ 
+  this.showmessage('success',"reussi", "ajout ajouter avec succés" );
+}
   }
 
   showMessage(arg0: string, arg1: string, arg2: string) {
@@ -64,7 +86,7 @@ this.SousCategorieService.addsouscategorie(data).subscribe(
   
 // méthode pour la modification
 modifierCategorie(): void {
-  const souscategorieToUpdate = {   "sous_categorie":this.souscategorie , "categorie_id":this.cat_id};
+  const souscategorieToUpdate = {"sous_categorie":this.souscategorie , "categorie_id":this.cat_id};
  
  
   console.log(souscategorieToUpdate)
@@ -77,6 +99,8 @@ modifierCategorie(): void {
       console.error("Erreur lors de la modification:", error);
     }
   );
+  this.showmessage('success',"reussi", "ajout ajouter avec succés" );
+
 }
   // méthode pour la suppression
   
@@ -95,4 +119,11 @@ modifierCategorie(): void {
       );
     }
   }
+  showmessage(icon:any, titre:any, text: any) {
+    Swal.fire({
+      icon:icon,
+      title:titre,
+      text:text
+    })
+    }
 }
